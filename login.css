@@ -1,0 +1,292 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu ul li {
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #466ae2;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.dropdown input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.dropdown button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1e6ccb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown button:hover {
+    background-color: #e6b800;
+}
+.login-button a {
+    background: #1e40af;
+    color: white !important;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.login-button a:hover {
+    background: #1e3a8a;
+    transform: scale(1.05);
+}
+.timhieu-button a {
+    background: #1e40af;
+    color: white !important;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+.timhieu-button a:hover {
+    background: #1e3a8a;
+    transform: scale(1.05);
+    margin-top: 100px;
+}
+/* ---------- Background & Container ---------- */
+.background-login {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(20deg, #a7b4d9, #1e6ccb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-login img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
+
+/* ---------- Form Container ---------- */
+.login-form {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.login-form h1 {
+    color: #1e3a8a;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.txtb {
+    position: relative;
+    margin: 30px 0;
+}
+
+.txtb input {
+    min-width: 90%;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(252, 248, 248, 0.9);
+}
+
+.txtb input:focus {
+    border-color: #1e6ccb;
+    box-shadow: 0 0 10px rgba(30, 108, 203, 0.2);
+}
+
+.txtb span {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.txtb input:focus + span,
+.txtb input:valid + span {
+    top: -10px;
+    left: 15px;
+    font-size: 12px;
+    color: #1e6ccb;
+    background: white;
+    padding: 0 5px;
+}
+
+/* ---------- Login Button ---------- */
+.logbtn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #1e6ccb, #1e3a8a);
+    color: white !important;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logbtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 108, 203, 0.4);
+}
+
+/* ---------- Bottom Links ---------- */
+.bottom-text {
+    margin-top: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+.bottom-text a {
+    color: #1e6ccb;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.bottom-text a:hover {
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+/* Social Login Container */
+.social-login {
+    margin: 2rem 0;
+}
+
+.social-divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.divider-text {
+    padding: 0 1rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.social-divider::before,
+.social-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Social Buttons */
+.social-btns {
+    display: grid;
+    gap: 1rem;
+}
+
+.google-btn, .facebook-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    border: 2px solid transparent;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.google-btn {
+    background: #fff;
+    border-color: #e5e7eb;
+    color: #1f2937;
+}
+
+.google-btn:hover {
+    background: #f3f4f6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.facebook-btn {
+    background: #1877f2;
+    color: white;
+}
+
+.facebook-btn:hover {
+    background: #166fe5;
+    box-shadow: 0 2px 8px rgba(24,119,242,0.3);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+}
+

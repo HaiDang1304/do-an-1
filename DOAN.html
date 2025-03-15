@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Chủ - TĐ Touris</title>
     <link rel="stylesheet" href="doan.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="/path/to/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="header">
         <div class="logo">
-            <img src="logo1.png" alt="TĐ Touris Logo">
+            <img src="./public/logo1.png" TĐ Touris Logo>
         </div>
         <div class="menu">
             <ul>
@@ -31,7 +34,7 @@
     </div>
     <div class="content">
         <video autoplay muted loop id="video-background">
-            <source src="Phu Quoc - Drone Chill Video 4K.mp4" type="video/mp4">
+            <source src="./public/videonen.mp4" type="video/mp4">
         </video>
         <div class="content-text">
             <h1>Chào mừng đến với TĐ Touris</h1>
@@ -41,34 +44,59 @@
                 <a href="gioithieu.html">Tìm Hiểu Thêm</a>
             </div>
         </div>
-     
-            <!-- <h5 style="color: white;">Đăng ký ngay để nhận thông tin khuyến mãi mới nhất</h5>
-        <form action="dangky.php" method="post">
-            <input type="email" name="email" placeholder="Nhập email của bạn" required>
-            <button type="submit">Đăng Ký</button>
-        </form> -->
 
-     </div>
-     <div class="content-slider">
-            <h2 class="heading-slider">Hãy cùng nhau đi khắp việt nam</h2>
-            <h4>Muốn đi nhanh hãy đi một mình | muốn đi xa hãy đi cùng GoodTrip</h4>
-            <a class="morebanner-btn" href="#4diemden">Trải nghiệm</a>
-            <div class="slider">
-                <div class="slide active">
-                    <img src="phuquoc.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="sapa.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="dalat.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="nhatrang.jpg" alt="">
-                </div>
+    </div>
+    <div class="tieude">
+        <h5 class="tblack">HÃY ĐỒNG HÀNH CÙNG NHAU NHÉ</h5>
+        <span class="tracking-in-contract-bck-bottom">__________________</span>
+        <h2 class="t-content">KHÁM PHÁ NGAY CÁC ĐỊA ĐIỂM 
+            <span class="text-blue">NỔI TIẾNG</span> 
+        </h2>
+    </div>
+    
+    
+    <div class="carousel">
+        <div class="carousel-cell"><img src="./public/h1.webp" data-pswp-src="./public/h1.webp" data-pswp-width="1200"
+                data-pswp-height="800" alt="Cảnh quan Phú Quốc">
+        </div>
+        <div class="carousel-cell"><img src="./public/h2.webp" data-pswp-src="./public/h1.webp" data-pswp-width="1200"
+                data-pswp-height="800" alt="Cảnh quan Phú Quốc"></div>
+        <div class="carousel-cell"><img src="./public/h3.webp" data-pswp-src="./public/h1.webp" data-pswp-width="1200"
+                data-pswp-height="800" alt="Cảnh quan Phú Quốc"></div>
+        <div class="carousel-cell"><img src="./public/h4.webp" data-pswp-src="./public/h1.webp" data-pswp-width="1200"
+                data-pswp-height="800" alt="Cảnh quan Phú Quốc"></div>
+        <div class="carousel-cell"><img src="./public/h5.webp" data-pswp-src="./public/h1.webp" data-pswp-width="1200"
+                data-pswp-height="800" alt="Cảnh quan Phú Quốc"></div>
+        <dix class="carousel-cell"><img src="./public/h6.webp" data-pswp-src="./public/h1.webp" data-pswp-width="1200"
+                data-pswp-height="800" alt="Cảnh quan Phú Quốc"></dix>
+        <div class="carousel-cell"><img src="./public/h7.webp" data-pswp-src="./public/h1.webp" data-pswp-width="1200"
+                data-pswp-height="800" alt="Cảnh quan Phú Quốc"></div>
+    </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        // Khởi tạo Flickity
+        const elem = document.querySelector('.carousel');
+        new Flickity(elem, {
+            cellAlign: 'left',
+            contain: true,
+            wrapAround: true, // Tạo vòng lặp liên tục
+            autoPlay: 2000,   // Tự động chuyển slide (tính bằng ms)
+            pauseAutoPlayOnHover: true, // Tạm dừng khi rê chuột vào
+            prevNextButtons: true, // Hiển thị nút điều hướng
+            pageDots: true // Hiển thị chấm tròn điều hướng
+        });
+    </script>
+    <div class = "slide">
+        <div class="slide-content">
+            <h1>ĐẶT TOUR NGAY HÔM NAY</h1>
+            <p>Đừng bỏ lỡ cơ hội trải nghiệm những điều thú vị nhất tại Phú Quốc</p>
+            <div class="slide-button">
+                <a href="dichvu.html">Đặt Tour Ngay</a>
+            </div>
+        </div>
     </div>
 
-        <!-- <div class="footer">   
+    <!-- <div class="footer">   
         <p>Địa chỉ: 321 Nguyễn Văn Cừ, An Thới, Phú Quốc</p>
         <p>Điện thoại: 0123456789</p>
         <p>Email: dttouris@gmail.com</p>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flickity Carousel</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <style>
+        .carousel {
+            background: #EEE;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .carousel-cell {
+            width: 200px;
+            height: 200px;
+            margin-right: 10px;
+            background-color: #13c2c2;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-cell">1</div>
+        <div class="carousel-cell">2</div>
+        <div class="carousel-cell">3</div>
+        <div class="carousel-cell">4</div>
+        <div class="carousel-cell">5</div>
+    </div>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        // Khởi tạo Flickity
+        const elem = document.querySelector('.carousel');
+        new Flickity(elem, {
+            cellAlign: 'left',
+            contain: true,
+            wrapAround: true, // Tạo vòng lặp liên tục
+            autoPlay: 2000,   // Tự động chuyển slide (tính bằng ms)
+            pauseAutoPlayOnHover: true, // Tạm dừng khi rê chuột vào
+            prevNextButtons: true, // Hiển thị nút điều hướng
+            pageDots: true // Hiển thị chấm tròn điều hướng
+        });
+    </script>
+</body>
+</html>

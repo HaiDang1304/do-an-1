@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD Touris</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="./public/logo1.png" TĐ Touris Logo>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="doan.html">Trang Chủ</a></li>
+                <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                <li><a href="dichvu.html">Dịch Vụ</a></li>
+                <li><a href="lienhe.html">Liên Hệ</a></li>
+                <li><a href="thongtin.html">Thông Tin</a></li>
+                <li><a href="danhgia.html">Đánh Giá</a></li>
+                <li class="login-button">
+                    <a href="login.html">Đăng Nhập</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="background-login">
+        <img src="./public/backgroudlogin.png" alt="background-login">
+        <div class="login-form">
+            <h1>Đăng Nhập</h1>
+            <form action="login.php" method="POST">
+                <div class="txtb">
+                    <input type="text" name="username" required>
+                    <span data-placeholder="Tên Đăng Nhập"></span>
+                </div>
+                <div class="txtb">
+                    <input type="password" name="password" required>
+                    <span data-placeholder="Mật Khẩu"></span>
+                </div>
+                <input type="submit" class="logbtn" value="Đăng Nhập">
+                <div class="bottom-text">
+                    Bạn chưa có tài khoản? <a href="register.html">Đăng Ký</a>
+                    <div class ="social-login"> 
+                        <div class = "social-divider">
+                            <span class="divider-text">Hoặc đăng nhập bằng</span>
+                        </div>
+                        <div class="social-btns">
+                            <button type="button" class="google-btn">
+                                <svg clas ="social-icon">...</svg>
+                                Google
+                            </button>
+                            <button type="button" class="facebook-btn">
+                                <svg clas ="social-icon">...</svg>
+                                Facebook
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
