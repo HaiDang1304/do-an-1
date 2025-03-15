@@ -52,7 +52,7 @@ body{
     width: auto;
 }
 
-.menu ul {
+.menu >ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -62,11 +62,11 @@ body{
     gap: 20px;
 }
 
-.menu ul li {
+.menu >ul li {
     margin: 0 20px;
 }
 
-.menu ul li a {
+.menu >ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -74,7 +74,7 @@ body{
     transition: color 0.3s ease;
 }
 
-.menu ul li a:hover {
+.menu >ul li a:hover {
     color: #466ae2;
 }
 
@@ -271,7 +271,58 @@ body{
     transition: 0.2s ease;
     margin-top: 15px;
 }
+.ticket-container {
+    
+}
+.tickets {
+    display: flex;
+    gap: 8px;
 
+}
+.ticket{
+    display:flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: calc(25% - 8px);
+    position: relative;
+
+
+}
+.ticket img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.ticket-content {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 0 0 10px 10px;
+}
+.ticket-localtion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #080808;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px 0 10px 0;
+}
+.menu-item{
+    position: relative;
+}
+.sub-menu{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    background-color: #1e6ccb;
+
+}
+.menu-item:hover .sub-menu{
+    display: block;
+}
   
   
 
