@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TD Touris - Đăng Nhập </title>
-    <link rel="stylesheet" href="login.css">
+    <title>TD Touris - Đăng Ký</title>
+    <link rel="stylesheet" href="register.css">
 </head>
+
 <body>
     <div class="header">
         <div class="logo">
@@ -36,27 +38,39 @@
     <div class="background-login">
         <img src="./public/backgroudlogin.png" alt="background-login">
         <div class="login-form">
-            <h1>Đăng Nhập</h1>
+            <h1>Đăng Ký</h1>
             <form action="login.php" method="POST">
                 <div class="txtb">
                     <input type="text" name="username" required>
                     <span data-placeholder="Tên Đăng Nhập"></span>
+                    <p id="usernameError" class="error-message" style="color: red; display: none;">Vui lòng nhập email
+                        hoặc số điện thoại hợp lệ.</p>
+                    <hint>Nhập vào số điện thoại hoặc Email</hint>
                 </div>
                 <div class="txtb">
                     <input type="password" name="password" required>
                     <span data-placeholder="Mật Khẩu"></span>
+                    <hint>Mật khẩu phải chứa ít nhất 8 ký tự</hint>
                 </div>
-                <input type="submit" class="logbtn" value="Đăng Nhập">
-                <div class="bottom-text">
-                    Bạn chưa có tài khoản? <a href="register.html">Đăng Ký</a>
-                    <div class ="social-login"> 
-                        <div class = "social-divider">
-                            <span class="divider-text">Hoặc đăng nhập bằng</span>
-                        </div>
+                <div class="txtb">
+                    <input type="password" name="password" required>
+                    <span data-placeholder="Nhập Lại Mật Khẩu"></span>
+                    <hint>Nhập lại mật khẩu</hint>
+                </div>
+                <div class="captcha-container">
+                    <label for="captcha">Nhập CAPTCHA:</label>
+                    <div id="captchaDisplay"></div>
+                    <div class="captcha-input">
+                        <input type="txtcaptcha" id="captchaInput" name="captcha" required>
+                        <button type="button" onclick="generateCaptcha()">Tạo lại</button>
                     </div>
                 </div>
+                <p id="message" class="error-message"></p>
+                <input type="submit" class="logbtn" value="Đăng Ký">
             </form>
         </div>
     </div>
+    <script src="captcha.js"></script>
 </body>
+
 </html>

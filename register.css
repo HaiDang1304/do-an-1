@@ -1,15 +1,15 @@
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: auto;
     font-family: 'Roboto', sans-serif;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     position: fixed;
@@ -17,12 +17,13 @@ body{
     left: 0;
     z-index: 2;
 }
+
 .logo img {
     height: 50px;
     width: auto;
 }
 
-.menu >ul {
+.menu>ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -32,11 +33,11 @@ body{
     gap: 20px;
 }
 
-.menu >ul li {
+.menu>ul li {
     margin: 0 20px;
 }
 
-.menu >ul li a {
+.menu>ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -44,9 +45,10 @@ body{
     transition: color 0.3s ease;
 }
 
-.menu >ul li a:hover {
+.menu>ul li a:hover {
     color: #466ae2;
 }
+
 .dropdown {
     display: none;
     position: absolute;
@@ -78,6 +80,7 @@ body{
 .dropdown button:hover {
     background-color: #e6b800;
 }
+
 .login-button a {
     background: #1e40af;
     color: white !important;
@@ -91,6 +94,7 @@ body{
     background: #1e3a8a;
     transform: scale(1.05);
 }
+
 .timhieu-button a {
     background: #1e40af;
     color: white !important;
@@ -99,11 +103,13 @@ body{
     font-weight: 500;
     transition: 0.2s ease;
 }
+
 .timhieu-button a:hover {
     background: #1e3a8a;
     transform: scale(1.05);
     margin-top: 100px;
 }
+
 /* ---------- Background & Container ---------- */
 .background-login {
     position: relative;
@@ -183,23 +189,81 @@ body{
     padding: 0 5px;
 }
 
-.menu-item{
+/* ---------- Captcha ---------- */
+.captcha-container {
+    margin-bottom: 20px;
+
+
+}
+
+#captchaDisplay {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+}
+
+/* From Uiverse.io by cssbuttons-io */
+button {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
     position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
 }
-.sub-menu{
-    display: none;
+
+button:before {
+    content: "";
     position: absolute;
-    min-width: 160px;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button:before {
     top: 100%;
-    left: 0;
-    background-color: #1e6ccb;
-
-}
-.menu-item:hover .sub-menu{
-    display: block;
+    left: 100%;
+    transition: all 0.7s;
 }
 
-/* ---------- Login Button ---------- */
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+.captcha-input {
+    width:center;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(252, 248, 248, 0.9);
+}
+
+
+
+/* ---------- Button ---------- */
 .logbtn {
     width: 100%;
     padding: 15px;
@@ -220,89 +284,20 @@ body{
     box-shadow: 0 5px 15px rgba(30, 108, 203, 0.4);
 }
 
-/* ---------- Bottom Links ---------- */
-.bottom-text {
-    margin-top: 25px;
-    color: #666;
-    font-size: 14px;
+.menu-item {
+    position: relative;
 }
 
-.bottom-text a {
-    color: #1e6ccb;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
+.sub-menu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    background-color: #1e6ccb;
+
 }
 
-.bottom-text a:hover {
-    color: #1e3a8a;
-    text-decoration: underline;
+.menu-item:hover .sub-menu {
+    display: block;
 }
-/* Social Login Container */
-.social-login {
-    margin: 2rem 0;
-}
-
-.social-divider {
-    display: flex;
-    align-items: center;
-    margin: 1.5rem 0;
-}
-
-.divider-text {
-    padding: 0 1rem;
-    color: #6b7280;
-    font-size: 0.9rem;
-}
-
-.social-divider::before,
-.social-divider::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-/* Social Buttons */
-.social-btns {
-    display: grid;
-    gap: 1rem;
-}
-
-.google-btn, .facebook-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem;
-    border: 2px solid transparent;
-    border-radius: 0.75rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.google-btn {
-    background: #fff;
-    border-color: #e5e7eb;
-    color: #1f2937;
-}
-
-.google-btn:hover {
-    background: #f3f4f6;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.facebook-btn {
-    background: #1877f2;
-    color: white;
-}
-
-.facebook-btn:hover {
-    background: #166fe5;
-    box-shadow: 0 2px 8px rgba(24,119,242,0.3);
-}
-
-.social-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 0.75rem;
-}
-

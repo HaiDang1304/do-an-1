@@ -38,7 +38,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
+
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     position: fixed;
@@ -245,8 +245,8 @@ body{
       opacity: 1;
     }
   }
-  .text-blue {
-    color: #1e40af;
+.text-blue {
+    color: #01143e;
     font-weight: bold;
 }
 .slide {
@@ -255,25 +255,28 @@ body{
     align-items: center;
     border-radius: 20px;
     min-height: 50px;
-    background-color: #1e6ccb;
-    color: #f2f2f2;
+    color: #0c0c0d;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     margin-top: 100px;
 }
 .slide-button {
-    background: #1e40af;
-    color: white !important;
+    background: #1c3bb5;
+    color: rgb(16, 9, 9) !important;
     padding: 5px 10px;
     border-radius: 8px;
     font-weight: 500;
     transition: 0.2s ease;
     margin-top: 15px;
+    width: 40%;
+    margin-left: 30%;
 }
-.ticket-container {
-    
+.slide-button a {
+    color: white;
+    text-decoration: none;
 }
+
 .tickets {
     display: flex;
     gap: 8px;
@@ -294,10 +297,17 @@ body{
     object-fit: cover;
     border-radius: 10px;
 }
-.ticket-content {
+.t-content{
     padding: 10px;
+    margin-left: 10px;
+    border-radius: 0 0 10px 10px;
+}
+.ticket-content {
+    padding: 20px;
     background-color: #f2f2f2;
     border-radius: 0 0 10px 10px;
+    font: 20px sans-serif;
+
 }
 .ticket-localtion{
     position: absolute;
