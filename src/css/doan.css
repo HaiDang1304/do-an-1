@@ -5,22 +5,25 @@ body{
     overflow: auto;
     font-family: 'Roboto', sans-serif;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
 .content-full{
-    max-width: 1440px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
 #video-background {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
     width: 100%;
     height: 100vh;
     object-fit: cover;
     z-index: -1;
 }
 .content {
-    position: relative;
+    /* position: absolute; */
     z-index: 1;
     display: flex;
     align-items: center;
@@ -48,11 +51,16 @@ body{
     top: 0;
     left: 0;
     z-index: 2;
+    height: 70px;
 }
 
 .logo img {
     height: 50px;
     width: auto;
+}
+
+ul{
+    list-style: none;
 }
 
 .menu >ul {
@@ -147,6 +155,7 @@ body{
     border-radius: 8px;
     font-weight: 500;
     transition: 0.2s ease;
+    text-decoration: none;
 }
 .timhieu-button a:hover {
     background: #1e3a8a;
@@ -183,6 +192,7 @@ body{
     font-size: 1.2rem;
     font-weight: 500;
     text-align: center;
+    margin-top: 40px;
 }
 .tblack {
     color: black!important;
@@ -242,6 +252,7 @@ body{
     font-weight: bold;
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 .slide-button {
     background: #1c3bb5;
@@ -263,6 +274,7 @@ body{
     display: flex;
     gap: 8px;
 
+
 }
 .ticket{
     display:flex;
@@ -272,6 +284,10 @@ body{
     position: relative;
 
 
+}
+.ticket:hover{
+    opacity: 0.5;
+    transform: scale(1.01);
 }
 .ticket img {
     width: 100%;
@@ -290,18 +306,50 @@ body{
     border-radius: 0 0 10px 10px;
     font: 20px sans-serif;
 
+    
+
 }
 .ticket-localtion{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #080808;
+    background-color:#1d74e6;
+    border-radius: 0 10px 10px 0;
+    padding: 5px 10px;
+}
+.ticket-localtion-tag{
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+.ticket-localtion-hatag{ 
+    background-color:rgba(3, 59, 242, 0.5);
     color: white;
     padding: 5px 10px;
-    border-radius: 10px 0 10px 0;
+    border-radius: 10px 10px 10px;
+    margin-top: 5px;
+    
 }
+.ticket-localtion-tag:first-child{
+    margin-bottom: 10px;
+  
+}
+.ticket-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+h3 {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .menu-item{
     position: relative;
+  
 }
 .sub-menu{
     display: none;
@@ -309,7 +357,11 @@ body{
     min-width: 160px;
     top: 100%;
     left: 0;
-    background-color: #1e6ccb;
+    background-color:rgba(17, 52, 104, 0.5);
+    padding: 4px;
+    border-radius: 10px;
+    
+
 
 }
 .menu-item:hover .sub-menu{
@@ -371,8 +423,136 @@ body{
     transform: translateX(0);
     opacity: 1;
   }
+  /* Nhân thông báo email */
+  .send-notification-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #f8f9fa;
+  }
+.send-notification-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    }
+
+.send-notification-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.send-notification-content {
+    position: absolute;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+    color: #f3f5f8;
+    font-size: 1rem;
+}
+.input-send{
+    width: 70%;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+}
+.send-notification-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.button-send{
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer; 
+}
+.button-send span {
+    display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+.button-send svg{
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+.button-send:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+.button-send:hover .svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+.button-send:hover span {
+    transform: translateX(5em);
+}
+.button-send:active{
+    transform: scale(0.95);
+}
+@keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+
+  /* Tag lời gợi ý */
+  .suggest-container{
+    margin-top: 50px;
+
+  }
+  .suggest-item{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    box-shadow: 0px 1px 2px rgba(3, 18, 26, 0.20);
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .suggest-image{
+    width: 60px;
+    height: 40px;
+  }
+
+  .suggest-content{
+    padding: 20px;
+    height: 90px;
+    display: flex;
+  }
+  .suggest-list{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
+    gap: 16px; /* Khoảng cách giữa các ô */
+  }
+  .suggest-body p{
+    text-align: justify;
+  }
+
+
+  
+
 /* Layout chính */
 .footer-container {
+    margin-top: 120px;
     background-color: #f8f9fa;
     color: #4a5568;
     padding: 3rem 1rem;
