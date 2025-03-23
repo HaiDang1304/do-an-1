@@ -1,74 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TD Touris - Đăng Ký</title>
     <link rel="stylesheet" href="../css/register.css">
+    <script type="module">
+        // Import Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, sendEmailVerification }
+            from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+
+        // Cấu hình Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyD4twjlqWI-ea0GyNxYPG6yrNyOLspkUhg",
+            authDomain: "do-an-1-6302c.firebaseapp.com",
+            projectId: "do-an-1-6302c",
+            storageBucket: "do-an-1-6302c.appspot.com",
+            messagingSenderId: "261152376192",
+            appId: "1:261152376192:web:466b8b382e22d334e16d65",
+            measurementId: "G-3JHLECRCC9"
+        };
+
+        // Khởi tạo Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+
+
+            // CAPTCHA
+            let generatedCaptcha = "";
+            function generateCaptcha() {
+                let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                generatedCaptcha = "";
+                for (let i = 0; i < 6; i++) {
+                    generatedCaptcha += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                document.getElementById("captchaDisplay").textContent = generatedCaptcha;
+            }
+            window.onload = generateCaptcha;
+            ////
+
+            document.getElementById("registerForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Ngăn chặn form gửi đi mặc định
+
+                let email = document.getElementById("email").value;
+                let password = document.getElementById("password").value;
+                let confirmPassword = document.getElementById("confirmPassword").value;
+                let captchaInput = document.getElementById("captchaInput").value;
+
+                // Kiểm tra mật khẩu nhập lại
+                if (password !== confirmPassword) {
+                    alert("Mật khẩu nhập lại không khớp!");
+                    return;
+                }
+
+                // Kiểm tra CAPTCHA
+                if (captchaInput !== generatedCaptcha) {
+                    alert("CAPTCHA không chính xác!");
+                    return;
+                }
+
+                // Đăng ký tài khoản với Firebase
+                createUserWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        const user = userCredential.user;
+
+                        // Gửi email xác thực
+                        sendEmailVerification(user)
+                            .then(() => {
+                                alert("Đăng ký thành công! Vui lòng kiểm tra email để xác thực.");
+                                window.location.href = "login.html"; // Quay lại trang đăng nhập
+                            })
+                            .catch((error) => {
+                                alert("Lỗi gửi email xác thực: " + error.message);
+                            });
+                    })
+                    .catch((error) => {
+                        alert("Lỗi đăng ký: " + error.message);
+                    });
+            });
+        });
+
+    </script>
 </head>
 
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="../public/images/logo1.png" TĐ Touris Logo>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Trang Chủ</a></li>
-                <li><a href="gioithieu.html">Giới Thiệu</a></li>
-                <li class="menu-item">
-                    <a href="dichvu.html">Dịch Vụ</a>
-                    <ul class="sub-menu">
-                        <li><a href="dichvu.html">Tour Du Lịch</a></li>
-                        <li><a href="dichvu.html">Vé Máy Bay</a></li>
-                        <li><a href="dichvu.html">Khách Sạn</a></li>
-                    </ul>
-                </li>
-                <li><a href="lienhe.html">Liên Hệ</a></li>
-                <li><a href="thongtin.html">Thông Tin</a></li>
-                <li><a href="danhgia.html">Đánh Giá</a></li>
-                <li class="login-button">
-                    <a href="login.html">Đăng Nhập</a>
-                </li>
-            </ul>
-
-        </div>
-    </div>
     <div class="background-login">
         <img src="../public/images/backgroudlogin.png" alt="background-login">
         <div class="login-form">
             <h1>Đăng Ký</h1>
-            <form action="login.php" method="POST">
+            <form id="registerForm">
                 <div class="txtb">
-                    <input type="text" name="username" required placeholder="Nhập vào số điện thoại hoặc Email">
-                    <span data-placeholder="Tên Đăng Nhập"></span>
-                    <p id="usernameError" class="error-message" style="color: red; display: none;">Vui lòng nhập email
-                        hoặc số điện thoại hợp lệ.</p>
+                    <input type="email" id="email" required placeholder="Nhập vào Email">
                 </div>
                 <div class="txtb">
-                    <input type="password" name="password" required placeholder="Nhập vào mật khẩu">
-                    <span data-placeholder="Mật Khẩu"></span>
+                    <input type="password" id="password" required placeholder="Nhập vào mật khẩu">
                 </div>
                 <div class="txtb">
-                    <input type="password" name="password" required placeholder="Nhập lại mật khẩu">
-                    <span data-placeholder="Nhập Lại Mật Khẩu"></span>
+                    <input type="password" id="confirmPassword" required placeholder="Nhập lại mật khẩu">
                 </div>
                 <div class="captcha-container">
                     <label for="captcha">Nhập CAPTCHA:</label>
                     <div id="captchaDisplay"></div>
                     <div class="captcha-input">
-                        <input type="txtcaptcha" id="captchaInput" name="captcha" required placeholder="Nhập vào CAPTCHA">
-                        <p id="captchaError" class="error-message" style="color: red; display: none;">CAPTCHA không chính xác.</p>
+                        <input type="text" id="captchaInput" required placeholder="Nhập CAPTCHA">
                         <button type="button" onclick="generateCaptcha()">Tạo lại</button>
                     </div>
                 </div>
-                <p id="message" class="error-message"></p>
                 <input type="submit" class="logbtn" value="Đăng Ký">
             </form>
         </div>
     </div>
-    <script src="../js/captcha.js"></script>
 </body>
 
 </html>

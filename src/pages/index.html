@@ -14,29 +14,40 @@
 
 <body>
     <div class="header">
-        <div class="logo">
-            <img src="../public/images/logo1.png" TĐ Touris Logo>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="doan.html">Trang Chủ</a></li>
-                <li><a href="gioithieu.html">Giới Thiệu</a></li>
-                <li class="menu-item">
-                    <a href="dichvu.html">Dịch Vụ</a>
-                    <ul class="sub-menu">
-                        <li><a href="dichvu.html">Tour Du Lịch</a></li>
-                        <li><a href="dichvu.html">Vé Máy Bay</a></li>
-                        <li><a href="dichvu.html">Khách Sạn</a></li>
-                    </ul>
-                </li>
-                <li><a href="lienhe.html">Liên Hệ</a></li>
-                <li><a href="thongtin.html">Thông Tin</a></li>
-                <li><a href="danhgia.html">Đánh Giá</a></li>
-                <li class="login-button">
-                    <a href="login.html">Đăng Nhập</a>
-                </li>
-            </ul>
+        <div>
+            <div class="logo">
+                <img src="../public/images/logousave.png" >
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="doan.html">Trang Chủ</a></li>
+                    <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                    <li class="menu-item">
+                        <a href="dichvu.html">Dịch Vụ</a>
+                        <ul class="sub-menu">
+                            <li><a href="dichvu.html">Tour Du Lịch</a></li>
+                            <li><a href="dichvu.html">Khách Sạn</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="lienhe.html">Liên Hệ</a></li>
+                    <li><a href="thongtin.html">Thông Tin</a></li>
+                    <li><a href="danhgia.html">Đánh Giá</a></li>
 
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="user-login">
+
+            <a href="login.html" class="login-button">Đăng Nhập</a>
+
+            <span id="user-info" style="display: none;">
+            </span>
+            <button id="logout" class="logout" style="display: none;">
+                Đăng Xuất
+            </button>
         </div>
     </div>
     <div class="content">
@@ -54,6 +65,7 @@
 
     </div>
     <div class="content-full">
+
         <div class="tieude">
             <h5 class="tblack">HÃY ĐỒNG HÀNH CÙNG NHAU NHÉ</h5>
             <span class="tracking-in-contract-bck-bottom">__________________</span>
@@ -81,11 +93,15 @@
                     data-pswp-width="1200" data-pswp-height="800" alt="Cảnh quan Phú Quốc"></div>
         </div>
         <div class="slide">
+            <div class="slide-img-backgroud">
+                <img src="../public/images/backgroud6.0.jpeg">
+            </div>
             <div class="slide-content">
                 <h1>ĐẶT TOUR NGAY HÔM NAY</h1>
                 <p>Đừng bỏ lỡ cơ hội trải nghiệm những điều thú vị nhất tại Phú Quốc</p>
                 <div class="slide-button">
                     <a href="dichvu.html">Đặt Tour Ngay</a>
+
                 </div>
 
             </div>
@@ -348,138 +364,274 @@
                 </a>
             </div>
         </div>
-        <div class="send-notification-container">
-            <div class="send-notification-image">
-                <img src="../public/images/imgaemail.webp" alt="Đăng ký nhận thông báo">
 
-            </div>
-            <div class="send-notification-content">
-                <h2 class="send-content">ĐỪNG BỎ LỠ CƠ HỘI NHẬN THÔNG BÁO MỚI NHẤT</h2>
-                <p>Đăng ký nhận thông báo để nhận thông tin mới nhất về các chương trình khuyến mãi và ưu đãi đặc biệt
-                    từ chúng tôi.</p>
-                <form action="#" method="POST" class="send-notification-form">
-                    <input class="input-send" type="email" name="email" placeholder="Nhập email của bạn" required>
-                    <button class="button-send">
-                        <div class="svg-wrapper-1">
-                            <div class="svg-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor"
-                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                    </path>
-                                </svg>
-                            </div>
+
+
+        <!-- Cẩm nang du lịch -->
+
+        <div class="travel-guide-container">
+            <h2>Cẩm nang du lịch</h2>
+            <div class="travel-guide-content">
+
+                <div class="travel-guide-image">
+                    <div class="travel-guide-overplay">
+
+                    </div>
+                    <img src="../public/image-travel-guide/Vinwonder.webp" title="VinWonders-Phu-Quoc-Image" </div>
+                    <div class="travel-guide-text">
+                        <h4>VinWonders Phu Quoc</h4>
+                        <p>
+                            <span>
+                                <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
+                                    Xem chi tiết
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="travel-guide-image">
+                    <div class="travel-guide-overplay">
+
+                    </div>
+                    <img src="../public/image-travel-guide/Safari.webp" title="Safari-Phu-Quoc-Image" </div>
+                    <div class="travel-guide-text">
+                        <h4>Safari Phu Quoc</h4>
+                        <p>
+                            <span>
+                                <a class="see-more-travel" href="camnangdulich/VinWonders-Safari">
+                                    Xem chi tiết
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="travel-guide-image">
+                    <div class="travel-guide-overplay">
+
+                    </div>
+                    <img src="../public/image-travel-guide/Cong-vien-Ice-Jungle-PQ.webp"
+                        title="CongVienIceJungle-Phu-Quoc-Image" </div>
+                    <div class="travel-guide-text">
+                        <h4>Cong Vien Ice Jungle </h4>
+                        <p>
+                            <span>
+                                <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
+                                    Xem chi tiết
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="travel-guide-image">
+                    <div class="travel-guide-overplay">
+
+                    </div>
+                    <img src="../public/image-travel-guide/Grand-World_PQ.webp" title="Grand-Worl-PQ-Image" </div>
+                    <div class="travel-guide-text">
+                        <h4>Grand World Phu Quoc</h4>
+                        <p>
+                            <span>
+                                <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
+                                    Xem chi tiết
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="travel-guide-image">
+                    <div class="travel-guide-overplay">
+
+                    </div>
+                    <img src="../public/image-travel-guide/Sunset-Sanato.webp" title="Sunset-sanato-Phu-Quoc-Image"
                         </div>
-                        <span>Send</span>
-                    </button>
-                </form>
+                    <div class="travel-guide-text">
+                        <h4>Sunset Sanato Phu Quoc</h4>
+                        <p>
+                            <span>
+                                <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
+                                    Xem chi tiết
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bảng hiển thị thông tin các danh mục -->
+
+            <div class="tab-container">
+                <div class="tab-header">
+                    <h2>Bạn muốn khám phá điều gì</h2>
+                </div>
+                <div class="tabs" id="tab-content">
+                    <div class="tab active" data-tab="hotels">Các khách sạn hàng đầu</div>
+                    <div class="tab" data-tab="activities">Các điểm tham quan hàng đầu</div>
+                </div>
+                <div class="tab-body">
+                    <div class="body active" id="hotels">
+                        <ul>
+
+                            <li><a href="#" class="footer-link">The Palmy Phú Quốc Resort And Spa</a></li>
+                            <li><a href="#" class="footer-link">Sol By Meliá Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Movenpick Resort Waverly Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Ocean Bay Resort & Spa Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Best Western Premier Sonasea Phú Quốc</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" class="footer-link">Qualia Resort Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Sunset Beach Resort Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Amarin Resort & Spa Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Seashell Phú Quốc Hotel & Spa</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" class="footer-link">M Hotel Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Thanh Kiều Beach Resort Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">The Shells Resort And Spa</a></li>
+                            <li><a href="#" class="footer-link">Mường Thanh Luxury</a></li>
+                        </ul>
+                    </div>
+                    <div class="body" id="activities">
+                        <ul>
+                            <li><a href="#" class="footer-link">Bãi Ông Lang</a></li>
+                            <li><a href="#" class="footer-link">Bãi Khem</a></li>
+                            <li><a href="#" class="footer-link">Bãi Sao</a></li>
+                            <li><a href="#" class="footer-link">Hòn Thơm</a></li>
+                            <li><a href="#" class="footer-link">Làng Chài Hàm Ninh</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" class="footer-link">VinWonders Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Safari Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Grand World</a></li>
+                            <li><a href="#" class="footer-link">Trải nghiệm dù lượn</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" class="footer-link">Khám phá các đảo bằng Cano</a></li>
+                            <li><a href="#" class="footer-link">Chèo Thuyền Kayak</a></li>
+                            <li><a href="#" class="footer-link">Gành Dầu Phú Quốc</a></li>
+                            <li><a href="#" class="footer-link">Hòn Đồi Mồi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="send-notification-container">
+                <div class="send-notification-image">
+                    <img src="../public/images/imgaemail.webp" alt="Đăng ký nhận thông báo">
+
+                </div>
+                <div class="send-notification-content">
+                    <h2 class="send-content">ĐỪNG BỎ LỠ CƠ HỘI NHẬN THÔNG BÁO MỚI NHẤT</h2>
+                    <p>Đăng ký nhận thông báo để nhận thông tin mới nhất về các chương trình khuyến mãi và ưu đãi đặc
+                        biệt
+                        từ chúng tôi.</p>
+                    <form action="#" method="POST" class="send-notification-form">
+                        <input class="input-send" type="email" name="email" placeholder="Nhập email của bạn" required>
+                        <button class="button-send">
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span>Send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!--Tag lời gợi ý  -->
+            <div class="suggest-container">
+                <div class="suggest-container-content">
+                    <h3>Lý do nên đặt chỗ với TD Touris ?</h3>
+                </div>
+                <div class="suggest-list">
+                    <div class=" suggest-item">
+                        <img class="suggest-image" src="../public/images/item-list.webp" alt="public travis" </div>
+                        <div class="suggest-body">
+                            <h4>Đáp ứng mọi như cầu của bạn</h4>
+                            <p>Từ nơi lưu trú và tham quan, bạn có thể tin chọn sản phẩm hoàn chỉnh và Hướng dẫn cụ thể
+                                của
+                                chúng tôi.</p>
+                        </div>
+                    </div>
+                    <div class=" suggest-item">
+                        <img class="suggest-image" src="../public/images/suggest-2.webp" alt="public travis" </div>
+                        <div class="suggest-body">
+                            <h4>Tùy chọn chỗ linh hoạt </h4>
+                            <p>Kế hoạch thay đổi bất ngờ ? Đừng lo !! Đổi lịch hoạt hoàn tiền dễ dàng.</p>
+                        </div>
+                    </div>
+                    <div class=" suggest-item">
+                        <img class="suggest-image" src="../public/images/suggest3.webp" alt="public travis" </div>
+                        <div class="suggest-body">
+                            <h4>Thanh toán an toàn và thuận tiện</h4>
+                            <p>Tận hưởng nhiều cách thanh toán an toàn, bằng loại tiền thuận tiện nhất cho bạn.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--Tag lời gợi ý  -->
-        <div class="suggest-container">
-            <div class="suggest-container-content">
-                <h3>Lý do nên đặt chỗ với TD Touris ?</h3>
+
+
+
+
+        <!-- footer -->
+
+        <footer class="footer-container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="payment-partners">
+                        <h4 class="partners-heading">Đối tác thanh toán</h4>
+                        <div class="payment-grid">
+                            <img src="../public/images//payment/visa-logo-png.png" alt="VISA" class="payment-logo">
+                            <img src="../public/images//payment/BIDV-01.png" alt="BIDV" class="payment-logo">
+                            <img src="../public/images//payment/logo-MB.png" alt="MB Bank" class="payment-logo">
+                            <img src="../public/images//payment/Agribank-logo.png" alt="Agribank" class="payment-logo">
+                            <img src="../public/images//payment/MoMo_Logo.png" alt="MoMo" class="payment-logo">
+                        </div>
+                    </div>
+                    <!-- Cột Sản phẩm -->
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Về TD Touris</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Liên hệ với chúng tôi </a></li>
+                            <li><a href="#" class="footer-link">Trợ giúp</a></li>
+                            <li><a href="#" class="footer-link">Về chúng tôi</a></li>
+                        </ul>
+                    </div>
+                    <!-- Cột Sản phẩm -->
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Sản phẩm</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Khách sạn</a></li>
+                            <li><a href="#" class="footer-link">Vé du lịch</a></li>
+                        </ul>
+                    </div>
+                    <!-- Cột Sản phẩm -->
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Khác</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Chính sách và quyền hạn</a></li>
+                            <li><a href="#" class="footer-link">Điều kiện và điều khoản</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <span class="copyright">© 2025 TD Touris. All rights reserved</span>
+                </div>
             </div>
-            <div class="suggest-list">
-                <div class=" suggest-item">
-                    <img class="suggest-image"
-                        src="../public/images/item-list.webp"
-                        alt="public travis" </div>
-                    <div class="suggest-body">
-                        <h4>Đáp ứng mọi như cầu của bạn</h4>
-                        <p>Từ nơi lưu trú và tham quan, bạn có thể tin chọn sản phẩm hoàn chỉnh và Hướng dẫn cụ thể của
-                            chúng tôi.</p>
-                    </div>
-                </div>
-                <div class=" suggest-item">
-                    <img class="suggest-image"
-                        src="../public/images/suggest-2.webp"
-                        alt="public travis" </div>
-                    <div class="suggest-body">
-                        <h4>Tùy chọn chỗ linh hoạt </h4>
-                        <p>Kế hoạch thay đổi bất ngờ ? Đừng lo !! Đổi lịch hoạt hoàn tiền dễ dàng.</p>
-                    </div>
-                </div>
-                <div class=" suggest-item">
-                    <img class="suggest-image"
-                        src="../public/images/suggest3.webp"
-                        alt="public travis" </div>
-                    <div class="suggest-body">
-                        <h4>Thanh toán an toàn và thuận tiện</h4>
-                        <p>Tận hưởng nhiều cách thanh toán an toàn, bằng loại tiền thuận tiện nhất cho bạn.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
-
-
-
-    <!-- footer -->
-
-    <footer class="footer-container">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="payment-partners">
-                    <h4 class="partners-heading">Đối tác thanh toán</h4>
-                    <div class="payment-grid">
-                        <img src="../public/images//payment/visa-logo-png.png" alt="VISA" class="payment-logo">
-                        <img src="../public/images//payment/BIDV-01.png" alt="BIDV" class="payment-logo">
-                        <img src="../public/images//payment/logo-MB.png" alt="MB Bank" class="payment-logo">
-                        <img src="../public/images//payment/Agribank-logo.png" alt="Agribank" class="payment-logo">
-                        <img src="../public/images//payment/MoMo_Logo.png" alt="MoMo" class="payment-logo">
-                    </div>
-                </div>
-                <!-- Cột Sản phẩm -->
-                <div class="footer-column">
-                    <h4 class="footer-heading">Về TD Touris</h4>
-                    <ul class="footer-list">
-                        <li><a href="#" class="footer-link">Liên hệ với chúng tôi </a></li>
-                        <li><a href="#" class="footer-link">Trợ giúp</a></li>
-                        <li><a href="#" class="footer-link">Về chúng tôi</a></li>
-                    </ul>
-                </div>
-                <!-- Cột Sản phẩm -->
-                <div class="footer-column">
-                    <h4 class="footer-heading">Sản phẩm</h4>
-                    <ul class="footer-list">
-                        <li><a href="#" class="footer-link">Khách sạn</a></li>
-                        <li><a href="#" class="footer-link">Vé du lịch</a></li>
-                    </ul>
-                </div>
-                <!-- Cột Sản phẩm -->
-                <div class="footer-column">
-                    <h4 class="footer-heading">Khác</h4>
-                    <ul class="footer-list">
-                        <li><a href="#" class="footer-link">Chính sách và quyền hạn</a></li>
-                        <li><a href="#" class="footer-link">Điều kiện và điều khoản</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <span class="copyright">© 2025 TD Touris. All rights reserved</span>
-            </div>
-        </div>
-        </div>
     </footer>
     </div>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script>
-        // Khởi tạo Flickity
-        const elem = document.querySelector('.carousel');
-        new Flickity(elem, {
-            cellAlign: 'left',
-            contain: true,
-            wrapAround: true, // Tạo vòng lặp liên tục
-            autoPlay: 2000,   // Tự động chuyển slide (tính bằng ms)
-            pauseAutoPlayOnHover: true, // Tạm dừng khi rê chuột vào
-            prevNextButtons: true, // Hiển thị nút điều hướng
-            pageDots: true // Hiển thị chấm tròn điều hướng
-        });
-    </script>
+    <script type="module" src="../js/src-index-google.js"> </script>
+    <script src="../js/index-tab.js"></script>
 </body>
 
 

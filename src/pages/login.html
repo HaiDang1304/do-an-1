@@ -1,62 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TD Touris - Đăng Nhập </title>
+    <title>TD Touris - Đăng Nhập</title>
     <link rel="stylesheet" href="../css/login.css">
 </head>
-<body>
-    <div class="header">
-        <div class="logo">
-            <img src="../public/images/logo1.png" TĐ Touris Logo>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Trang Chủ</a></li>
-                <li><a href="gioithieu.html">Giới Thiệu</a></li>
-                <li class="menu-item">
-                    <a href="dichvu.html">Dịch Vụ</a>
-                    <ul class="sub-menu">
-                        <li><a href="dichvu.html">Tour Du Lịch</a></li>
-                        <li><a href="dichvu.html">Vé Máy Bay</a></li>
-                        <li><a href="dichvu.html">Khách Sạn</a></li>
-                    </ul>
-                </li>
-                <li><a href="lienhe.html">Liên Hệ</a></li>
-                <li><a href="thongtin.html">Thông Tin</a></li>
-                <li><a href="danhgia.html">Đánh Giá</a></li>
-                <li class="login-button">
-                    <a href="login.html">Đăng Nhập</a>
-                </li>
-            </ul>
 
-        </div>
-    </div>
+<body>
+
+
+    <!-- Background Login -->
     <div class="background-login">
         <img src="../public/images/backgroudlogin.png" alt="background-login">
         <div class="login-form">
             <h1>Đăng Nhập</h1>
-            <form action="login.php" method="POST">
+            <div>
                 <div class="txtb">
-                    <input type="text" name="username" required placeholder="Nhập vào số điện thoại hoặc Email">
-                    <span data-placeholder="Tên Đăng Nhập"></span>
+                    <input id="email" type="text" name="username" required placeholder="Nhập vào số điện thoại hoặc Email">
                 </div>
                 <div class="txtb">
-                    <input type="password" name="password" required placeholder="Nhập vào mật khẩu">
-                    <span data-placeholder="Mật Khẩu"></span>
+                    <input id="password" type="password" name="password" required placeholder="Nhập vào mật khẩu">
                 </div>
-                <input type="submit" class="logbtn" value="Đăng Nhập">
+                <input type="submit" id="logbtn" class="logbtn" value="Đăng Nhập">
                 <div class="bottom-text">
                     Bạn chưa có tài khoản? <a href="register.html">Đăng Ký</a>
-                    <div class ="social-login"> 
-                        <div class = "social-divider">
-                            <span class="divider-text">Hoặc đăng nhập bằng</span>
-                        </div>
-                    </div>
                 </div>
-            </form>
+            </div>
+
+            <!-- Đăng nhập bằng Google -->
+            <div class="social-login">
+                <div class="social-divider">
+                    <span class="divider-text">Hoặc đăng nhập bằng</span>
+                </div>
+                <div class="social-buttons">
+                    <button id="google-login" class="google-login">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5">
+                            <path
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                fill="#4285F4"></path>
+                            <path
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                fill="#34A853"></path>
+                            <path
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                fill="#FBBC05"></path>
+                            <path
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                fill="#EA4335"></path>
+                            <path d="M1 1h22v22H1z" fill="none"></path>
+                        </svg>
+                        Đăng nhập với Google
+                    </button>
+                    <button id="logout" class="logout" style="display: none;">
+                        Đăng Xuất
+                    </button>
+                </div>
+                <p id="user-info"></p>
+            </div>
         </div>
     </div>
+
+    <!-- Firebase Authentication -->
+    <script type="module">
+        // Import Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
+
+        // Cấu hình Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyD4twjlqWI-ea0GyNxYPG6yrNyOLspkUhg",
+            authDomain: "do-an-1-6302c.firebaseapp.com",
+            projectId: "do-an-1-6302c",
+            storageBucket: "do-an-1-6302c.appspot.com",
+            messagingSenderId: "261152376192",
+            appId: "1:261152376192:web:466b8b382e22d334e16d65",
+            measurementId: "G-3JHLECRCC9"
+        };
+
+        // Khởi tạo Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
+
+        // Xử lý đăng nhập bằng Google
+        document.getElementById("google-login").addEventListener("click", () => {
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    const user = result.user;
+                    console.log(user)
+
+                    const data = {
+                        username: user.displayName, email: user.email
+
+                    }
+
+
+                    localStorage.setItem("user", JSON.stringify(data));
+
+                    window.location.href = "/src/pages/index.html"
+                })
+                .catch((error) => {
+                    console.error("Lỗi đăng nhập:", error);
+                });
+        });
+
+        document.getElementById("logbtn").addEventListener("click", function () {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+
+                    if (!user.emailVerified) {
+                        alert("Bạn chưa xác thực email! Vui lòng kiểm tra hộp thư.");
+                        return;
+                    }
+
+                    alert("Đăng nhập thành công!");
+                    window.location.href = "index.html"; // Chuyển đến trang chính
+                })
+                .catch((error) => {
+                    alert("Lỗi đăng nhập: " + error.message);
+                });
+        });
+
+
+        // Xử lý đăng xuất
+        document.getElementById("logout").addEventListener("click", () => {
+            signOut(auth).then(() => {
+                document.getElementById("user-info").innerHTML = "";
+                document.getElementById("google-login").style.display = "block";
+                document.getElementById("logout").style.display = "none";
+            }).catch((error) => {
+                console.error("Lỗi đăng xuất:", error);
+            });
+        });
+
+        // Kiểm tra trạng thái đăng nhập
+        onAuthStateChanged(auth, (user) => {
+            console.log(user)
+            if (user) {
+                document.getElementById("user-info").innerHTML = `Xin chào, ${user.displayName} (${user.email})`;
+                document.getElementById("google-login").style.display = "none";
+                document.getElementById("logout").style.display = "block";
+            } else {
+                document.getElementById("user-info").innerHTML = "";
+                document.getElementById("google-login").style.display = "flex";
+                document.getElementById("logout").style.display = "none";
+            }
+        });
+    </script>
+
 </body>
+
 </html>

@@ -6,21 +6,67 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+.content-full {
+    max-width: 1140px;
+    margin: 0 auto;
+   
+}
+
+#video-background {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    /* position: absolute; */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.content-text {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.363);
+    backdrop-filter: blur(10px);
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
+    height: 70px;
 }
 
 .logo img {
     height: 50px;
     width: auto;
+}
+
+ul {
+    list-style: none;
 }
 
 .menu>ul {
@@ -81,6 +127,20 @@ body {
     background-color: #e6b800;
 }
 
+
+.content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
 .login-button a {
     background: #1e40af;
     color: white !important;
@@ -95,20 +155,6 @@ body {
     transform: scale(1.05);
 }
 
-.timhieu-button a {
-    background: #1e40af;
-    color: white !important;
-    padding: 10px 25px;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: 0.2s ease;
-}
-
-.timhieu-button a:hover {
-    background: #1e3a8a;
-    transform: scale(1.05);
-    margin-top: 100px;
-}
 
 /* ---------- Background & Container ---------- */
 .background-login {
@@ -252,9 +298,9 @@ button:hover:before {
     left: -30px;
 }
 .captcha-input {
-    width:center;
+   
     padding: 15px 20px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #b3b3bb;
     border-radius: 10px;
     font-size: 16px;
     transition: all 0.3s ease;

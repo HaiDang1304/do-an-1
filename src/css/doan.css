@@ -1,19 +1,25 @@
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: auto;
     font-family: 'Roboto', sans-serif;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: all 0.2s linear;
 }
-.content-full{
+a{
+    text-decoration: none;
+}
+
+.content-full {
     max-width: 1140px;
     margin: 0 auto;
+   
 }
 
 #video-background {
@@ -22,6 +28,7 @@ body{
     object-fit: cover;
     z-index: -1;
 }
+
 .content {
     /* position: absolute; */
     z-index: 1;
@@ -32,52 +39,82 @@ body{
     text-align: center;
     overflow: hidden;
 }
+
 .content-text {
     position: absolute;
     z-index: 1;
     color: white;
     text-align: center;
 }
+/* css header đăng nhập*/
+#user-info{
+font-size: 16px;
+color: rgb(240, 238, 238);
+margin-right: 10px;
+font-weight: bold;
+font-size: 20px;
 
-
+}
+#logout{
+    background-color: rgba(28, 68, 228);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+}
+#logout:hover {
+    background-color: rgb(20, 145, 207);
+}
+/* header */
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.363);
+    backdrop-filter: blur(10px);
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
     height: 70px;
+    padding: 0 16px;
+}
+
+.header>div{
+    display: flex;
+    gap:32px;
+    align-items: center;
 }
 
 .logo img {
-    height: 50px;
-    width: auto;
+    /* margin-top: 30px; */
+   width: 100px;
+   height: auto;
+   object-fit: cover;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.menu >ul {
+.menu>ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
-.menu >ul li {
+.menu>ul li {
     margin: 0 20px;
+    font-size: 14px;
 }
 
-.menu >ul li a {
+.menu>ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -85,7 +122,7 @@ ul{
     transition: color 0.3s ease;
 }
 
-.menu >ul li a:hover {
+.menu>ul li a:hover {
     color: #466ae2;
 }
 
@@ -135,7 +172,7 @@ ul{
 }
 
 
-.login-button a {
+.login-button {
     background: #1e40af;
     color: white !important;
     padding: 10px 25px;
@@ -148,6 +185,7 @@ ul{
     background: #1e3a8a;
     transform: scale(1.05);
 }
+
 .timhieu-button a {
     background: #1e40af;
     color: white !important;
@@ -157,13 +195,15 @@ ul{
     transition: 0.2s ease;
     text-decoration: none;
 }
+
 .timhieu-button a:hover {
     background: #1e3a8a;
     transform: scale(1.05);
     margin-top: 100px;
 }
+
 .carousel {
-    background: #EEE;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
 }
@@ -172,87 +212,117 @@ ul{
     width: 200px;
     height: 200px;
     margin-right: 10px;
-    background-color: #13c2c2;
+    background-color: #16aeae;
     border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: white;
+    color: rgb(24, 47, 197);
 }
+
 .carousel-cell img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
+
 .tieude {
     letter-spacing: 0.2rem;
-    color: black!important;
+    color: black !important;
     font-size: 1.2rem;
     font-weight: 500;
     text-align: center;
     margin-top: 40px;
 }
+
 .tblack {
-    color: black!important;
+    color: black !important;
     letter-spacing: 0.5rem;
     font-size: 1.5rem;
     font-weight: 500;
-    font-style: italic!important;
+    font-style: italic !important;
 }
+
 .tracking-in-contract-bck-bottom {
-	-webkit-animation: tracking-in-contract-bck-bottom 2s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
-	        animation: tracking-in-contract-bck-bottom 2s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+    -webkit-animation: tracking-in-contract-bck-bottom 2s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+    animation: tracking-in-contract-bck-bottom 2s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
 }
+
 @-webkit-keyframes tracking-in-contract-bck-bottom {
     0% {
-      letter-spacing: 1em;
-      -webkit-transform: translateZ(400px) translateY(300px);
-              transform: translateZ(400px) translateY(300px);
-      opacity: 0;
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px) translateY(300px);
+        transform: translateZ(400px) translateY(300px);
+        opacity: 0;
     }
+
     40% {
-      opacity: 0.6;
+        opacity: 0.6;
     }
+
     100% {
-      -webkit-transform: translateZ(0) translateY(0);
-              transform: translateZ(0) translateY(0);
-      opacity: 1;
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
     }
-  }
-  @keyframes tracking-in-contract-bck-bottom {
+}
+
+@keyframes tracking-in-contract-bck-bottom {
     0% {
-      letter-spacing: 1em;
-      -webkit-transform: translateZ(400px) translateY(300px);
-              transform: translateZ(400px) translateY(300px);
-      opacity: 0;
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px) translateY(300px);
+        transform: translateZ(400px) translateY(300px);
+        opacity: 0;
     }
+
     40% {
-      opacity: 0.6;
+        opacity: 0.6;
     }
+
     100% {
-      -webkit-transform: translateZ(0) translateY(0);
-              transform: translateZ(0) translateY(0);
-      opacity: 1;
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
     }
-  }
+}
+
 .text-blue {
-    color: #01143e;
+    color: #0e5aff;
     font-weight: bold;
 }
+
 .slide {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     min-height: 50px;
-    color: #0c0c0d;
+    color: #5893eb;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     margin-top: 100px;
     margin-bottom: 50px;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+.slide-img-backgroud{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.slide-img-backgroud img{
+    width: 100%;
+    object-fit: cover;
+}
+.slide-content{
+    position: absolute;
+    margin-bottom: 100px;
 }
 .slide-button {
     background: #1c3bb5;
@@ -265,6 +335,7 @@ ul{
     width: 40%;
     margin-left: 30%;
 }
+
 .slide-button a {
     color: white;
     text-decoration: none;
@@ -276,8 +347,9 @@ ul{
 
 
 }
-.ticket{
-    display:flex;
+
+.ticket {
+    display: flex;
     flex-direction: column;
     border-radius: 10px;
     width: calc(25% - 8px);
@@ -285,61 +357,71 @@ ul{
 
 
 }
-.ticket:hover{
+
+.ticket:hover {
     opacity: 0.5;
     transform: scale(1.01);
 }
+
 .ticket img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
-.t-content{
+
+.t-content {
     padding: 10px;
     margin-left: 10px;
     border-radius: 0 0 10px 10px;
 }
+
 .ticket-content {
     padding: 20px;
     background-color: #f2f2f2;
     border-radius: 0 0 10px 10px;
     font: 20px sans-serif;
 
-    
+
 
 }
-.ticket-localtion{
+
+.ticket-localtion {
     position: absolute;
     top: 0;
     left: 0;
-    background-color:#1d74e6;
+    background-color: #1d74e6;
     border-radius: 0 10px 10px 0;
     padding: 5px 10px;
 }
-.ticket-localtion-tag{
+
+.ticket-localtion-tag {
     position: absolute;
     top: 0;
-    left: 0; 
+    left: 0;
 }
-.ticket-localtion-hatag{ 
-    background-color:rgba(3, 59, 242, 0.5);
+
+.ticket-localtion-hatag {
+    background-color: rgba(3, 59, 242, 0.5);
     color: white;
     padding: 5px 10px;
     border-radius: 10px 10px 10px;
     margin-top: 5px;
-    
+
 }
-.ticket-localtion-tag:first-child{
+
+.ticket-localtion-tag:first-child {
     margin-bottom: 10px;
-  
+
 }
+
 .ticket-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
+
 h3 {
     -webkit-line-clamp: 2;
     display: -webkit-box;
@@ -347,32 +429,35 @@ h3 {
     overflow: hidden;
 }
 
-.menu-item{
+.menu-item {
     position: relative;
-  
+
 }
-.sub-menu{
+
+.sub-menu {
     display: none;
     position: absolute;
     min-width: 160px;
     top: 100%;
     left: 0;
-    background-color:rgba(17, 52, 104, 0.5);
+    background-color: rgba(17, 52, 104, 0.5);
     padding: 4px;
     border-radius: 10px;
-    
+
 
 
 }
-.menu-item:hover .sub-menu{
+
+.menu-item:hover .sub-menu {
     display: block;
 }
+
 .see-more-container {
     padding: 20px;
     text-align: center;
-  }
-  
-  .see-more-link {
+}
+
+.see-more-link {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -382,9 +467,9 @@ h3 {
     font-family: Arial, sans-serif;
     font-size: 20px;
     overflow: hidden;
-  }
-  
-  .see-more-link::after {
+}
+
+.see-more-link::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -393,18 +478,18 @@ h3 {
     height: 2px;
     background: #1a73e8;
     transition: width 0.3s ease;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     display: inline-block;
     width: 16px;
     height: 16px;
     transform: translateX(-10px);
     opacity: 0;
     transition: all 0.3s ease;
-  }
-  
-  .arrow::after {
+}
+
+.arrow::after {
     content: '';
     display: block;
     width: 8px;
@@ -413,30 +498,141 @@ h3 {
     border-bottom: 2px solid #1a73e8;
     transform: rotate(-45deg);
     margin-left: 4px;
-  }
-  
-  .see-more-link:hover::after {
+}
+
+.see-more-link:hover::after {
     width: 100%;
-  }
-  
-  .see-more-link:hover .arrow {
+}
+
+.see-more-link:hover .arrow {
     transform: translateX(0);
     opacity: 1;
-  }
-  /* Nhân thông báo email */
-  .send-notification-container {
+}
+
+/* Cẩm nang giới thiệt du lịch  */
+.travel-guide-content {
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    overflow-x: auto;
+    padding: 20px;
+    align-items:center;
+
+}
+
+.travel-guide-image {
+
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgb(54, 110, 194);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.travel-guide-image:hover{
+    transform: scale(1.1);
+}
+
+.travel-guide-overplay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    /* Chiều cao của hiệu ứng */
+    background: linear-gradient(to top, rgb(5, 2, 2), rgba(0, 0, 0, 0));
+    /* Hiệu ứng mờ dần */
+}
+
+.travel-guide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.travel-guide-text {
+    position: absolute;
+    font-size: 16px;
+    margin: 0px;
+    bottom: 48px;
+    left: 16px;
+    color: white;
+}
+/* Tab hiển thị thông tin các danh mục */
+.tab-container {
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px ;
+}
+
+.tab-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: gray;
+}
+
+.tab.active {
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
+.tab-body {
+    margin-top: 10px;
+
+}
+.body ul{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+}
+.body ul li{
+    padding: 8px 0;
+}
+
+.body {
+    display: none;
+}
+
+.body.active {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cột bằng nhau */
+    gap: 16px;
+    
+}
+
+
+/* Nhân thông báo email */
+.send-notification-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 300px;
     background-color: #f8f9fa;
-  }
+}
+
 .send-notification-image {
     position: relative;
     width: 100%;
     height: 100%;
-    }
+}
 
 .send-notification-image img {
     width: 100%;
@@ -444,6 +640,7 @@ h3 {
     object-fit: cover;
     border-radius: 10px;
 }
+
 .send-notification-content {
     position: absolute;
     max-width: 600px;
@@ -453,21 +650,24 @@ h3 {
     color: #f3f5f8;
     font-size: 1rem;
 }
-.input-send{
+
+.input-send {
     width: 70%;
     padding: 0.5em 1em;
     border: none;
     border-radius: 16px;
     font-size: 1rem;
 }
-.send-notification-form{
+
+.send-notification-form {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
 }
-.button-send{
+
+.button-send {
     font-family: inherit;
     font-size: 20px;
     background: royalblue;
@@ -480,75 +680,88 @@ h3 {
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.2s;
-    cursor: pointer; 
+    cursor: pointer;
 }
+
 .button-send span {
     display: block;
-  margin-left: 0.3em;
-  transition: all 0.3s ease-in-out;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
 }
-.button-send svg{
+
+.button-send svg {
     display: block;
     transform-origin: center center;
     transition: transform 0.3s ease-in-out;
 }
+
 .button-send:hover .svg-wrapper {
     animation: fly-1 0.6s ease-in-out infinite alternate;
 }
+
 .button-send:hover .svg {
     transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
+
 .button-send:hover span {
     transform: translateX(5em);
 }
-.button-send:active{
+
+.button-send:active {
     transform: scale(0.95);
 }
+
 @keyframes fly-1 {
     from {
-      transform: translateY(0.1em);
+        transform: translateY(0.1em);
     }
-  
-    to {
-      transform: translateY(-0.1em);
-    }
-  }
 
-  /* Tag lời gợi ý */
-  .suggest-container{
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+/* Tag lời gợi ý */
+.suggest-container {
     margin-top: 50px;
 
-  }
-  .suggest-item{
+}
+
+.suggest-item {
     display: flex;
     gap: 8px;
     align-items: center;
     box-shadow: 0px 1px 2px rgba(3, 18, 26, 0.20);
     border-radius: 10px;
     padding: 12px;
-  }
-  .suggest-image{
+}
+
+.suggest-image {
     width: 60px;
     height: 40px;
-  }
+}
 
-  .suggest-content{
+.suggest-content {
     padding: 20px;
     height: 90px;
     display: flex;
-  }
-  .suggest-list{
+}
+
+.suggest-list {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
-    gap: 16px; /* Khoảng cách giữa các ô */
-  }
-  .suggest-body p{
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cột bằng nhau */
+    gap: 16px;
+    /* Khoảng cách giữa các ô */
+}
+
+.suggest-body p {
     text-align: justify;
-  }
+}
 
 
-  
+
 
 /* Layout chính */
 .footer-container {
@@ -672,8 +885,3 @@ h3 {
     text-align: center;
     width: 100%;
 }
-
-  
-  
-
-
