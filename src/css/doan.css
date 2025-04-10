@@ -67,7 +67,6 @@ font-size: 20px;
     background-color: rgb(20, 145, 207);
 }
 /* header */
-
 .header {
     display: flex;
     justify-content: space-between;
