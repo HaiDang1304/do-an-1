@@ -12,7 +12,8 @@ body {
     box-sizing: border-box;
     transition: all 0.2s linear;
 }
-.content-full{
+
+.content-full {
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -176,6 +177,7 @@ ul {
     border-radius: 8px;
     font-weight: 500;
     transition: 0.2s ease;
+    text-decoration: none;
 }
 
 .login-button a:hover {
@@ -315,8 +317,10 @@ ul {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 40vh; /* Đảm bảo phần nền phủ toàn bộ chiều cao */
+    min-height: 40vh;
+    /* Đảm bảo phần nền phủ toàn bộ chiều cao */
 }
+
 .hotel-listing-wrapper {
     padding: 8px;
     border-radius: 12px;
@@ -356,6 +360,7 @@ ul {
     width: 100%;
     max-height: 300px;
     overflow-y: auto;
+
 }
 
 .selected-location {
@@ -406,7 +411,7 @@ ul {
     gap: 10px;
     background: white;
     width: 210px;
-    
+
     justify-content: space-between;
 }
 
@@ -424,7 +429,7 @@ ul {
     z-index: 100;
     text-align: center !important;
     inset: 0px auto auto 0px;
-    transform: translate3d(16px, 82px,0px);
+    transform: translate3d(16px, 82px, 0px);
 }
 
 .option {
@@ -452,22 +457,36 @@ ul {
 .btn-counter:hover {
     background: #ddd;
 }
+
 /* conten-m3 */
 .small-note {
     font-size: 0.875rem;
     color: #333;
-  }
-  .map-link {
+}
+
+.map-link {
     font-size: 0.875rem;
     color: #00bcd4;
     text-decoration: none;
     z-index: 2;
-  }
-  .map-link i {
+}
+
+.map-link i {
     margin-right: 4px;
-  }
-  /* banner-tickest */
-  .deal-box {
+}
+
+/* banner-tickest */
+.text-orange,
+.star-rating {
+    color: #ff7a00;
+    font-weight: 500;
+}
+
+.font-text {
+    font-size: 11.5px;
+}
+
+.deal-box {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -476,14 +495,14 @@ ul {
     position: relative;
     cursor: pointer;
     margin-top: 5px;
-  }
+}
 
-  .combo-banner:hover {
+.combo-banner:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-  }
+}
 
-  .ribbon {
+.ribbon {
     background: linear-gradient(135deg, #ff6a00, #ffb347);
     color: white;
     font-size: 0.75rem;
@@ -495,9 +514,9 @@ ul {
     z-index: 3;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-  }
+}
 
-  .hotel-tags .badge {
+.hotel-tags .badge {
     background-color: #f1f3f5;
     color: #444;
     font-size: 0.75rem;
@@ -505,28 +524,29 @@ ul {
     border-radius: 999px;
     padding: 6px 10px;
     border: 1px solid #dee2e6;
-  }
+}
 
-  .combo-banner {
+.combo-banner {
     background: linear-gradient(to right, #dfe9f3 0%, #ffffff 100%);
     padding: 0.4rem 0.3rem;
     font-weight: 500;
     border-radius: 0.75rem;
     font-size: 0.95rem;
     color: #333;
-    margin-top: 30px;
+    margin-top: 20px;
     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
-  }
+}
 
-  .stretched-link {
+.stretched-link {
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
-  }
+}
 
-  .map-link {
+.map-link {
     position: relative;
     z-index: 2;
     padding: 4px 10px;
@@ -537,30 +557,152 @@ ul {
     text-decoration: none;
     border: 1px solid transparent;
     transition: all 0.3s ease;
-  }
+}
 
-  .map-link i {
+.map-link i {
     transition: transform 0.3s ease;
-  }
+}
 
-  .map-link:hover {
+.map-link:hover {
     background-color: #e7f1ff;
     border-color: #0d6efd;
     color: #0a58ca;
     box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
     transform: translateY(-2px);
-  }
+}
 
-  .map-link:hover i {
+.map-link:hover i {
     transform: translateX(3px) scale(1.1);
-  }
+}
 
-  .text-warning {
+.text-warning {
     font-size: 1rem;
-  }
+}
 
-  .right-column {
+.right-column {
     background: #f8f9fa;
     border-left: 1px solid #dee2e6;
     border-radius: 0 1rem 1rem 0;
-  }
+}
+/* footer */
+.footer-container {
+    margin-top: 120px;
+    background-color: #f8f9fa;
+    color: #4a5568;
+    padding: 3rem 1rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid system */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Typography */
+.footer-heading {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    color: #2d3748;
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #4299e1;
+}
+
+
+.partners-heading {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-logo {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+    justify-self: center;
+}
+
+.payment-logo:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 640px) {
+    .payment-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Phần bottom */
+.footer-bottom {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.store-badge {
+    height: 40px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.store-badge:hover {
+    transform: translateY(-2px);
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-bottom: 1rem;
+    /* flex: 1; */
+    text-align: center;
+    width: 100%;
+}

@@ -33,19 +33,18 @@ const data = [
     },
     {
       id: 3,
-      title: "Title 3",
-      location: "Location 3",
+      title: "TKhu Nghỉ Dưỡng Movenpick Waverly Phú Quốc",
+      location: "Tổ 01,  Ông Lang,  Cửa Dương ",
       point: "7.5",
       total_previews: "300",
-      image: "image3.jpg",
-      description: "Description for Title 3",
+      image: "../public/images hotel/image-book-hotel/h3.webp",
+      description: " Còn 81 ngày | Combo 3N2Đ + Vé Máy Bay + Ăn sáng + Đưa Đón + Chocolate Hour từ 3.799.000 VND/Khách ",
       tag: [
-        { id: 1, name: "Tag 1" },
-        { id: 2, name: "Tag 2" },
-        { id: 3, name: "Tag 3" },
-        { id: 4, name: "Tag 4" },
-        { id: 5, name: "Tag 5" },
-        { id: 6, name: "Tag 6" },
+        { id: 1, name: "Chụp ảnh đẹp" },
+        { id: 2, name: "Thương hiệu quốc tế" },
+        { id: 3, name: "Hiện đại" },
+        { id: 4, name: "Villa hồ bơi riêng" },
+        { id: 5, name: "Miễn phí Chocolate Hour" },
       ]
     },
   ];
@@ -64,7 +63,7 @@ const data = [
 
         <div class="row g-0">
           <div class="col-md-3 position-relative">
-            <div class="ribbon bg-danger text-white px-2 py-1 small position-absolute top-0 start-0 rounded-end">
+            <div class="ribbon bg-danger text-white px-2 py-1 position-absolute  start-0 rounded-end">
               3N2Đ | VMB+Ăn sáng | 4tr099
             </div>
             <img src="${item.image}" class="img-fluid w-100 h-100 object-fit-cover" alt="Khách sạn">
@@ -77,10 +76,11 @@ const data = [
               <span class="badge bg-success ms-2">${item.point} Tuyệt vời</span>
               <small class="text-muted">| ${item.total_previews} đánh giá</small>
             </div>
-            <div class="mb-2">
+            <div class="mb-2 font-text">
               <i class="bi bi-geo-alt-fill text-danger"></i> ${item.location} -
               <a href="https://www.google.com/maps?q=${encodeURIComponent(item.title)}" 
-                 class="text-decoration-underline text-primary map-link" 
+                 class="text-decoration-none
+                  text-primary map-link" 
                  target="_blank">Xem bản đồ</a>
             </div>
             <div class="hotel-tags">

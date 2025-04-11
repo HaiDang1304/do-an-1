@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css/sell-tickets.css"">
     <!--Icon Bootstrap-->
     <link rel=" stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -149,7 +150,7 @@
 </div>
 <div class="content-full">
 
-  <div class="container mt-3">
+  <div class="container mt-3 bg-body-secondary p-3 rounded-3 shadow-sm" style="min-height: 40px; position: relative;">
     <div class="d-flex justify-content-between align-items-start">
       <div>
         <h5 class="mb-0 fw-bold text-primary">
@@ -166,21 +167,199 @@
     </div>
   </div>
   <!-- form -->
-  <div id="hotel-list">
+  <div class="d-flex gap-4 p-3">
+    <div>
+      <!-- Khung hỗ trợ -->
+      <div class="card p-3 d-flex flex-row " style=" max-height: 110px; min-width: 300px; margin-top: 20px;">
+        <img src="../public/images hotel/image-book-hotel/avata-support.jpg" alt="Hỗ trợ viên"
+          class="rounded-circle me-3" style="width: 80px; height: 80px; object-fit: cover;">
+        <div>
+          <h6 class="fw-bold mb-2">Cần hỗ trợ?</h6>
+          <div class="d-flex justify-content-between ">
+            <span>HD</span>
+            <a class="text-orange ms-2 text-decoration-none" href="tel:0948773012">0948773012</a>
+          </div>
+        </div>
+      </div>
+      <div class="card p-3" style=" max-height: auto; min-width: 300px; margin-top: 20px;">
+        <!-- Ô tìm kiếm -->
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Nhập tên khách sạn">
+          <button class="btn btn-warning text-white" type="button">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+
+        <!-- Hạng sao -->
+        <div class="mb-2 fw-bold">Hạng sao</div>
+
+        <!-- Checkbox các mức sao -->
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" checked>
+          <label class="form-check-label star-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </label>
+        </div>
+
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox">
+          <label class="form-check-label star-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </label>
+        </div>
+
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox">
+          <label class="form-check-label star-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </label>
+        </div>
+
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox">
+          <label class="form-check-label star-rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox">
+          <label class="form-check-label star-rating">
+            <i class="bi bi-star-fill"></i>
+          </label>
+        </div>
+        <!-- line -->
+        <hr class="my-3" style="margin-top: 10px;">
+
+        <div id="location-list" class="mb-4" style="margin-top: 10px;">
+          <h6 class="fw-bold">Khu vực</h6>
+        </div>
+      </div>
+      <!-- introduce -->
+      <div class="card p-3" style="max-width: 320px; margin-top: 20px;">
+        <div class="bg-body-secondary" style="text-align: center; border-radius: 9px; margin-bottom: 10px;">
+          <h6 class="fw-bold text-secondary mb-2 " style="margin-top: 5px;">Kinh nghiệm du lịch Phú Quốc</h6>
+        </div>
+
+        <p class="mb-2" style="font-size: 14px;">
+          Là hòn đảo lớn nhất Việt Nam, Phú Quốc sở hữu những bãi biển trong vắt, những dòng suối yên bình cùng khu rừng
+          nguyên sinh rộng lớn. <br><br>
+          Nhắc tới Phú Quốc, không thể không nhắc tới bãi Sao, bãi Dài, đặc sản hải sản khô tiêu, nước mắm, rượu sim hay
+          ngọc trai... Còn nữa, Phú Quốc còn nhiều ẩn số đang chờ bạn khám phá đó, đừng bỏ lỡ!
+        </p>
+        <a href="#" class="text-primary" style="font-size: 14px;">Xem thêm</a>
+      </div>
+    </div>
+
+
+    <div id="hotel-list"">
+      
+    </div>
   </div>
+  <div class=" card p-4">
+      <div class="d-flex justify-content-between align-items-start">
+        <h4 class="fw-bold">Khách sạn Phú Quốc</h4>
+        <div class="text-end">
+          <div class="text-warning">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <small class="text-muted">2.9/5 trên 1239 đánh giá</small>
+        </div>
+      </div>
+
+      <hr>
+
+      <p>
+        Cách đây ít năm, các <strong>khách sạn Phú Quốc</strong> vẫn còn rất ít và du lịch chưa phát triển mạnh mẽ.
+        Nhưng, với vị thế là hòn đảo lớn nhất Việt Nam...
+      </p>
+
+      <p>
+        Đa phần các khu nghỉ dưỡng nằm dọc <a href="#">bãi Trường</a>, <a href="#">bãi Dài</a>, <a href="#">bãi Ông
+          Lang</a>, <a href="#">bãi Sao</a>, <a href="#">bãi Khem</a>... nhưng tập trung nhiều nhất vẫn là các khách sạn
+        trên đường Trần Hưng Đạo...
+      </p>
+
+      <p>
+        TD Touris sẽ giúp bạn tìm được <a href="#">khách sạn Phú Quốc</a> chất lượng tốt với mức giá thấp nhất thị
+        trường...
+      </p>
+    </div>
+  </div>
+  <footer class="footer-container">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="payment-partners">
+          <h4 class="partners-heading">Đối tác thanh toán</h4>
+          <div class="payment-grid">
+            <img src="../public/images//payment/visa-logo-png.png" alt="VISA" class="payment-logo">
+            <img src="../public/images//payment/BIDV-01.png" alt="BIDV" class="payment-logo">
+            <img src="../public/images//payment/logo-MB.png" alt="MB Bank" class="payment-logo">
+            <img src="../public/images//payment/Agribank-logo.png" alt="Agribank" class="payment-logo">
+            <img src="../public/images//payment/MoMo_Logo.png" alt="MoMo" class="payment-logo">
+          </div>
+        </div>
+        <!-- Cột Sản phẩm -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Về TD Touris</h4>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Liên hệ với chúng tôi </a></li>
+            <li><a href="#" class="footer-link">Trợ giúp</a></li>
+            <li><a href="#" class="footer-link">Về chúng tôi</a></li>
+          </ul>
+        </div>
+        <!-- Cột Sản phẩm -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Sản phẩm</h4>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Khách sạn</a></li>
+            <li><a href="#" class="footer-link">Vé du lịch</a></li>
+          </ul>
+        </div>
+        <!-- Cột Sản phẩm -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Khác</h4>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Chính sách và quyền hạn</a></li>
+            <li><a href="#" class="footer-link">Điều kiện và điều khoản</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="copyright">© 2025 TD Touris. All rights reserved</span>
+      </div>
+    </div>
+</div>
+</footer>
+
 
 </div>
 
 </div>
 
-<script src="../js/sell-tickets-form.js"
-<script>
+<script src=" ../js/sell-tickets-form.js" <script>
   document.querySelectorAll('.map-link').forEach(link => {
     link.addEventListener('click', function (e) {
       e.stopPropagation(); // Ngăn sự kiện click lan ra link bao toàn khối
     });
   });
 </script>
+<script src="../js/sell-tickets-location.js"></script>
 <script src="../js/sell-tickers.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
