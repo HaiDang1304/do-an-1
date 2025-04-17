@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/hotel-details.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <div class="logo">
+                <img src="../public/images/logousave.png">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                    <li class="menu-item">
+                        <a href="dichvu.html">Dịch Vụ</a>
+                        <ul class="sub-menu">
+                            <li><a href="dichvu.html">Tour Du Lịch</a></li>
+                            <li><a href="dichvu.html">Khách Sạn</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="lienhe.html">Liên Hệ</a></li>
+                    <li><a href="thongtin.html">Thông Tin</a></li>
+                    <li><a href="danhgia.html">Đánh Giá</a></li>
+
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="user-login">
+
+            <a href="login.html" class="login-button">Đăng Nhập</a>
+
+            <span id="user-info" style="display: none;">
+            </span>
+            <button id="logout" class="logout" style="display: none;">
+                Đăng Xuất
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="content-full">
+        <nav aria-label="breadcrumb" class="pt-3 ps-2">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../pages/index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="../pages/sell-tickets.html">Đặt Khách Sạn</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Sheraton Phú Quốc Long Beach Resort</li>
+            </ol>
+        </nav>
+
+        <div class="container py-4">
+
+
+            <div class="row g-4 align-items-start">
+
+                
+                <!-- Nội dung trải nghiệm -->
+                <div class="col-md-3">
+                    <div class="map-responsive shadow-sm rounded-4 border">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.055221140003!2d103.84730287440763!3d10.33746606713829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a78dadb14e755f%3A0xe56f51e08e1d4db1!2sSheraton%20Phu%20Quoc%20Long%20Beach%20Resort!5e0!3m2!1svi!2sus!4v1744560059580!5m2!1svi!2sus"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <h3 class="text-primary fw-bold mt-2" style="font-size: 17px;">Trải nghiệm phải thử ở Sheraton Phú Quốc
+                        Long Beach
+                        Resort</h3>
+
+                    <h5 class="fw-bold mt-4 font-size">Tổ hợp Mua sắm Grand World</h5>
+                    <div class="font-size">
+                        <p>Nằm trong khu phức hợp nghỉ dưỡng và giải trí Corona & Phú Quốc United Center, với quy mô 85
+                            hecta,
+                            sở hữu nhiều công trình kiến trúc nổi bật... như Venice, Thượng Hải, Chợ Đêm và nhiều nữa.
+                        </p>
+                        <p>Tất cả hoạt động không ngủ, mở cửa 24/7, 365 ngày một năm...</p>
+                    </div>
+
+
+                    <h5 class="fw-bold mt-4 font-size">Công viên chủ đề VinWonders</h5>
+                    <div class="font-size">
+                        <p>VinWonders là công viên giải trí lớn nhất Đông Nam Á. Bao gồm 6 khu vực chủ đề, hơn 60 trò
+                            chơi đẳng cấp...</p>
+                        <p>Top 5 bể cá lớn nhất thế giới, tàu lượn siêu tốc nhanh nhất Việt Nam 95 km/h...</p>
+                    </div>
+
+
+                    <h5 class="fw-bold mt-4 font-size">Vườn thú Vinpearl Safari</h5>
+                    <p class="font-size">Vinpearl Safari là công viên bán hoang dã lớn nhất Việt Nam với hơn 3000 cá thể
+                        động vật quý hiếm đến
+                        từ khắp nơi trên thế giới...</p>
+                </div>
+
+                <!-- Slider hình ảnh -->
+                <div class="col-md-6 flex-fill">
+                    <div class="hotel-card d-flex justify-content-between align-items-start p-3 border rounded shadow-sm mb-4">
+                        <!-- Left: Thông tin khách sạn -->
+                        <div>
+                            <h5 class="fw-bold text-primary mb-1">
+                                Sheraton Phú Quốc Long Beach Resort <i class="fa-solid fa-heart text-danger"></i>
+                            </h5>
+
+                            <!-- Rating -->
+                            <div class="d-flex align-items-center mb-2 flex-wrap">
+                                <div class="text-warning me-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="badge bg-success me-2">9.5</div>
+                                <span class="text-success fw-medium me-2">Tuyệt vời</span>
+                                <span class="text-muted">| 789 đánh giá <i class="fa fa-chevron-down ms-1"></i></span>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="text-muted">
+                                <i class="fas fa-map-marker-alt me-1"></i>
+                                Bãi Dài, X. Gành Dầu, H. Phú Quốc, T. Kiên Giang
+                            </div>
+                        </div>
+
+                        <!-- Right: Giá và nút -->
+                        <div class="text-end">
+                            <small class="text-muted">Giá chỉ từ</small>
+                            <h4 class="text-info fw-bold">2.127.500 <span class="fs-6">VND</span></h4>
+                            <button class="btn btn-warning fw-bold text-white px-4 mt-1">Đặt ngay</button>
+                        </div>
+                    </div>
+                    <div class="gallery-container">
+                        <!-- Main Slider -->
+                        <div class="swiper main-swiper mb-3">
+                            <div class="swiper-wrapper">
+                                <!-- Lặp ảnh chính -->
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h1.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h2.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h3.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h4.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h5.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h6.avif"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h7.avif"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h8.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h9.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h10.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                            </div>
+                            <!-- Navigation -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                        <!-- Thumbnail Slider -->
+                        <div class="swiper thumb-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- Lặp ảnh nhỏ -->
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h1.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h2.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h3.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h4.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h5.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h6.avif"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h7.avif"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h8.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h9.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                                <div class="swiper-slide"><img
+                                        src="../public/images hotel/image-book-hotel/sheraton resort/h10.jpg"
+                                        class="img-fluid rounded" alt="" /></div>
+                            </div>
+                            <!-- Navigation -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="combo-tour border rounded p-4 mt-4 " style="background-color: rgba(198, 134, 88, 0.258);">
+                        <h4 class="text-primary fw-bold">Combo 3N2Đ | VMB + Đưa đón + Buffet sáng + Miễn phí trẻ</h4>
+                        <p class="fw-bold">Combo "Kiệt Tác Hoàng Hôn"</p>
+                        <ul>
+                            <li>Vé máy bay khứ hồi</li>
+                            <li>02 đêm nghỉ dưỡng ở phòng Deluxe Garden View rộng rãi</li>
+                            <li>Buffet sáng ẩm thực đa dạng tại nhà hàng quốc tế</li>
+                            <li>Miễn phí 1 trẻ em dùng buffet sáng & ngủ chung giường (tối đa 2 trẻ/phòng)</li>
+                            <li>Quà tặng Bảo hiểm khi đặt Combo</li>
+                        </ul>
+
+                        <p class="fw-bold text-danger">🌅 Khoảnh Khắc Đáng Nhớ:</p>
+                        <p>Say đắm trước kiệt tác hoàng hôn bên bể bơi vô cực và bãi biển cát trắng mịn.</p>
+
+                        <p class="fw-bold">✨ Tiện ích đi kèm:</p>
+                        <ul>
+                            <li>Bãi biển riêng, bể bơi vô cực 1900m2 & 2 bể bơi trẻ em 700m2</li>
+                            <li>Đưa đón sân bay theo lịch trình khu nghỉ</li>
+                            <li>Xe theo lịch trình đi VinWonders, Vinpearl Safari, Grand World</li>
+                            <li>Khu vui chơi trẻ em & hoạt động cho người lớn</li>
+                            <li>Wifi tốc độ cao, phòng gym hiện đại</li>
+                            <li>Thức uống chào mừng khi nhận phòng</li>
+                        </ul>
+
+                        <p><i>(*) Một số dịch vụ có thể phụ thu</i></p>
+
+                        <h5 class="text-success fw-bold mt-3">📌 Ghi chú đặc biệt</h5>
+                        <p>Nâng cấp vui chơi VinWonders & Vinpearl Safari khám phá show diễn triệu đô
+                            <strong>“Once”</strong> & khu vườn thú mở độc đáo.
+                        </p>
+
+                        <h5 class="fw-bold mt-3">📝 Điều kiện áp dụng:</h5>
+                        <ul>
+                            <li>Đặt tối thiểu 2 khách/phòng</li>
+                            <li>Dành cho khách Việt Nam</li>
+                            <li>Phụ thu cuối tuần Thứ 6-7 & dịp lễ 30/4 - 1/5</li>
+                        </ul>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const thumbSwiper = new Swiper(".thumb-swiper", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        const mainSwiper = new Swiper(".main-swiper", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: thumbSwiper,
+            },
+        });
+    </script>
+</body>
+
+</html>

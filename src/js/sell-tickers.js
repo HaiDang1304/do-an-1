@@ -1,3 +1,27 @@
+// click location
+document.addEventListener("DOMContentLoaded", function () {
+    // Bắt sự kiện khi người dùng chọn một địa điểm
+    document.querySelectorAll(".dropdown-item").forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        e.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+        const selectedLocation = this.getAttribute("data-location");
+        document.getElementById("current-location").textContent = selectedLocation;
+
+        // Hiển thị nút xoá khi đã chọn địa điểm
+        document.getElementById("clear-location").style.display = "inline-block";
+      });
+    });
+
+    // Xử lý khi người dùng nhấn nút xoá địa điểm
+    document.getElementById("clear-location").addEventListener("click", function () {
+      document.getElementById("current-location").textContent = "Chọn địa điểm";
+      this.style.display = "none"; // Ẩn nút xoá
+    });
+
+    // Mặc định ẩn nút xoá nếu chưa có địa điểm
+    document.getElementById("clear-location").style.display = "none";
+  });
+//click date time
 document.addEventListener("DOMContentLoaded", function () {
     function formatDateWithDay(date) {
         const daysOfWeek = ["Chủ Nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"];

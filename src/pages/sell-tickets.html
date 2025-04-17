@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <!-- Flatpickr JS -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <title>Document</title>
+  <title>Khách Sạn - TD Touris</title>
 </head>
 <div class="header">
   <div>
@@ -89,12 +89,15 @@
     <div class="hotel-header">
       <div>
         <div class=" selected-location fw-bold" data-bs-toggle="dropdown">
-          <span id="current-location">Chọn địa điểm</span>
+          <span id="current-location">
+            <i class="bi bi-geo-alt-fill"></i>  
+            Chọn địa điểm</span>
           <i class="fas fa-times clear-location" id="clear-location"></i>
         </div>
         <ul class="dropdown-menu mt-1 shadow">
           <li>
-            <h6 class="dropdown-header">Chọn địa điểm</h6>
+            <h6 class="dropdown-header">
+              Chọn địa điểm</h6>
           </li>
           <li><a class="dropdown-item" href="#" data-location="Dương Đông">Dương Đông</a></li>
           <li><a class="dropdown-item" href="#" data-location="An Thới">An Thới</a></li>
@@ -103,10 +106,15 @@
       </div>
       <div class="d-flex gap-4">
         <div class="date-box  flex-grow-1">
-          <button id="start-date" class="custom-date-btn">Chọn ngày đi</button>
+          
+          <button id="start-date" class="custom-date-btn p-2 align-items-center justify-content-center">
+            <i class="bi bi-calendar3"></i>
+            Chọn ngày đi</button>
         </div>
         <div class="date-box flex-grow-1">
-          <button id="end-date" class="custom-date-btn">Chọn ngày về</button>
+          <button id="end-date" class="custom-date-btn">
+            <i class="bi bi-calendar3"></i>
+            Chọn ngày về</button>
         </div>
 
         <!-- Nút Tìm kiếm -->
@@ -115,6 +123,7 @@
       <div class="dropdown-room-container d-flex">
         <div class="dropdown-btn" id="roomGuestBtn">
           <div>
+            <i class="bi bi-people-fill"></i>
             <span id="roomGuestadult">2 người lớn</span>
             <span id="roomGuestchild">0 trẻ em </span>
             <span id="roomGuestroom">1 phòng</span>

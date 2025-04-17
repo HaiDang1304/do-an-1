@@ -5,78 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Chủ - TĐ Touris</title>
+    <script src="../js/index-scrip.js" defer></script>
     <link rel="stylesheet" href="../css/doan.css">
+
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <script src="/path/to/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="header">
-        <div>
-            <div class="logo">
-                <img src="../public/images/logousave.png">
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="doan.html">Trang Chủ</a></li>
-                    <li><a href="gioithieu.html">Giới Thiệu</a></li>
-                    <li class="menu-item">
-                        <a href="dichvu.html">Dịch Vụ</a>
-                        <ul class="sub-menu">
-                            <li><a href="dichvu.html">Tour Du Lịch</a></li>
-                            <li><a href="sell-tickets.html">Khách Sạn</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="lienhe.html">Liên Hệ</a></li>
-                    <li><a href="thongtin.html">Thông Tin</a></li>
-                    <li><a href="danhgia.html">Đánh Giá</a></li>
-
-
-                </ul>
-
-            </div>
-        </div>
-
-        <div class="user-login">
-
-            <a href="login.html" class="login-button">Đăng Nhập</a>
-
-            <span id="user-info" style="display: none;">
-            </span>
-            <button id="logout" class="logout" style="display: none;">
-                Đăng Xuất
-            </button>
-        </div>
-    </div>
-    <div class="content">
-        <video autoplay muted loop id="video-background">
-            <source src="../public/videos/videonen.mp4" type="video/mp4">
-        </video>
-        <div class="content-text">
-            <h1>Chào mừng đến với TĐ Touris</h1>
-            <p>Hãy cùng nhau khám phá và tìm hiểu về thiên nhiên đa dạng phong phú <br> ở nơi được mệnh danh là Đảo Ngọc
-                của Việt Nam nhé.</p>
-            <div class="timhieu-button">
-                <a href="gioithieu.html">Tìm Hiểu Thêm</a>
-            </div>
-        </div>
-
-    </div>
+    
+    
     <div class="content-full">
 
-        <div class="tieude">
-            <h5 class="tblack">HÃY ĐỒNG HÀNH CÙNG NHAU NHÉ</h5>
-            <span class="tracking-in-contract-bck-bottom">__________________</span>
-            <h2 class="t-content">KHÁM PHÁ NGAY CÁC ĐỊA ĐIỂM
-                <span class="text-blue">NỔI TIẾNG</span>
-            </h2>
-        </div>
-
-
+      
+    </div>
         <div class="carousel">
-            <div class="carousel-cell"><img src="../public/images/honthom.webp" data-pswp-src="../public/images/honthom"
+            <div class="carousel-cell"><img src="../public/images/" data-pswp-src="../public/images/honthom"
                     data-pswp-width="1200" data-pswp-height="800" alt="Cảnh quan Phú Quốc">
             </div>
             <div class="carousel-cell"><img src="../public/images/h2.webp" data-pswp-src="../public/images/"
@@ -106,532 +52,427 @@
 
             </div>
         </div>
+        <!-- Vé tour  -->
         <div class="ticket-container">
             <h2 class="t-content">TẬN HƯỞNG THỜI GIAN TUYỆT VỜI KHI ĐẾN VỚI PHÚ QUỐC</h2>
-            <div class="tickets">
-                <div class="ticket">
-                    <div class="ticket-image">
-                        <img src="../public/images//honthom.webp" alt="Vé Sun World Hòn Thơm">
-                    </div>
-
-                    <div class="ticket-content">
-                        <h3>Vé Sun World Hòn Thơm</h3>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-star-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                            </svg>
-                            <span>5</span>/10
-                            <span>(3)</span>
-                        </p>
-                        <p>Chỉ từ 503.793đ</p>
-                    </div>
-                    <div class="ticket-localtion">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                        </svg>
-                        <span>Phú Quốc</span>
-                    </div>
-                </div>
-                <div class="ticket">
-                    <div class="ticket-image">
-                        <img src="../public/images//Veshowkissofthesea.webp"
-                            alt="Vé Show Kiss Of The Sea tại Phú Quốc | Việt Nam">
-                    </div>
-
-                    <div class="ticket-content">
-                        <h3>Vé Show Kiss Of The Sea</h3>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-star-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                            </svg>
-                            <span>5</span>/10
-                            <span>(3)</span>
-                        </p>
-                        <p>Chỉ từ 577.863đ</p>
-                    </div>
-                    <div class="ticket-localtion">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                        </svg>
-                        <span>Phú Quốc</span>
-                    </div>
-                </div>
-                <div class="ticket">
-                    <div class="ticket-image">
-                        <img src="../public/images//Symphony-Of-The-Sea-Phu-Quoc.webp"
-                            alt="Vé Symphony-Of-The-Sea-Phu-Quoc Phú Quốc | Việt Nam">
-                    </div>
-
-                    <div class="ticket-content">
-                        <h3>Vé Symphony Of The Sea</h3>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-star-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                            </svg>
-                            <span>5</span>/10
-                            <span>(3)</span>
-                        </p>
-                        <p>Chỉ từ 2999.908đ</p>
-                    </div>
-                    <div class="ticket-localtion">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                        </svg>
-                        <span>Phú Quốc</span>
-                    </div>
-                </div>
-                <div class="ticket">
-                    <div class="ticket-image">
-                        <img src="../public/images//VinWonders-Phu-Quoc-Tickets.webp" alt="Vé VinWonders Phú Quốc">>
-                    </div>
-                    <div class="ticket-content">
-                        <h3>Vé VinWonders & Sapari Phú Quốc</h3>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-star-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                            </svg>
-                            <span>5</span>/10
-                            <span>(3)</span>
-                        </p>
-                        <p>Chỉ từ 570.000đ</p>
-                    </div>
-                    <div class="ticket-localtion">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                        </svg>
-                        <span>Phú Quốc</span>
-                    </div>
-                </div>
-
+            <div class="tickets" id="ticket-list">
+                <!-- Dữ liệu sẽ được render tại đây -->
             </div>
             <div class="see-more-container">
-                <a href="#" class="see-more-link">
-                    Xem thêm
-                    <span class="arrow"></span>
-                </a>
-            </div>
-
-
-
-            <!-- Khách sạn -->
-
-
-            <h2 class="t-content">ĐA DẠNG LỰA CHỌN VỚI KHÁCH SẠN</h2>
-            <div class="tickets">
-                <div class="ticket">
-                    <div class="ticket-image">
-                        <img src="../public/images hotel/InterContinental.jpg" alt="InterContinental Phú Quốc">
-                    </div>
-                    <div class="ticket-content">
-                        <h3>InterContinental Phu Quoc Long Beach Resort</h3>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-star-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                            </svg>
-                            <span>5</span>/10
-                            <span>(3)</span>
-                        </p>
-                        <p>Chỉ từ 503.793đ</p>
-                    </div>
-                    <div class="ticket-localtion-tag">
-                        <div class="ticket-localtion-hatag">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-tag-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg>
-                            <span>Bán chạy nhất</span>
-
-                        </div>
-                        <div class="ticket-localtion-hatag">
-                            <span>Bao gồm bữa sáng</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="ticket">
-                    <div class="ticket-image">
-                        <img src="../public/images hotel/Vinpearl-Resort.jpg" alt="Vinpearl-Resort">
-                    </div>
-                    <div class="ticket-content">
-                        <h3>Vinpearl-Resort & Spa Phu Quoc</h3>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-star-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                            </svg>
-                            <span>5</span>/10
-                            <span>(3)</span>
-                        </p>
-                        <p>Chỉ từ 503.793đ</p>
-                    </div>
-                    <div class="ticket-localtion-tag">
-                        <div class="ticket-localtion-hatag">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-tag-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg>
-                            <span>Bán chạy nhất</span>
-
-                        </div>
-                        <div class="ticket-localtion-hatag">
-                            <span>Trọn gói</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="ticket">
-                    <div class="ticket-image">
-                        <img src="../public/images hotel/JW-Marriott.jpg" alt="JW-Marriott">
-                    </div>
-                    <div class="ticket-content">
-                        <h3>JW-Marriott Phu Quoc Emerald Bay Resort & Spa</h3>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-star-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                            </svg>
-                            <span>5</span>/10
-                            <span>(3)</span>
-                        </p>
-                        <p>Chỉ từ 503.793đ</p>
-                    </div>
-                    <div class="ticket-localtion-tag">
-                        <div class="ticket-localtion-hatag">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-tag-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg>
-                            <span>Bán chạy nhất</span>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="ticket">
-                    <div class="ticket-image">
-                        <img src="../public/images hotel/new-world-phu-quoc-resort.jpg" alt="New World Phu Quoc Resort">
-                    </div>
-                    <div class="ticket-content">
-                        <h3>New World Phu Quoc Resort</h3>
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-star-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                            </svg>
-                            <span>5</span>/10
-                            <span>(3)</span>
-                        </p>
-                        <p>Chỉ từ 503.793đ</p>
-                    </div>
-                    <div class="ticket-localtion-tag">
-                        <div class="ticket-localtion-hatag">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-tag-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg>
-                            <span>Bao gồm bữa sáng</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="see-more-container">
-                <a href="../pages/sell-tickets.html" class="see-more-link">
-                    Xem thêm
-                    <span class="arrow"></span>
-                </a>
+                <a href="#" class="see-more-link">Xem thêm<span class="arrow"></span></a>
             </div>
         </div>
 
 
 
-        <!-- Cẩm nang du lịch -->
+        <!-- Khách sạn -->
 
-        <div class="travel-guide-container">
-            <h2>Cẩm nang du lịch</h2>
-            <div class="travel-guide-content">
 
-                <div class="travel-guide-image">
-                    <div class="travel-guide-overplay">
-
-                    </div>
-                    <img src="../public/image-travel-guide/Vinwonder.webp" title="VinWonders-Phu-Quoc-Image" </div>
-                    <div class="travel-guide-text">
-                        <h4>VinWonders Phu Quoc</h4>
-                        <p>
-                            <span>
-                                <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
-                                    Xem chi tiết
-                                </a>
-                            </span>
-                        </p>
-                    </div>
+        <h2 class="t-content">ĐA DẠNG LỰA CHỌN VỚI KHÁCH SẠN</h2>
+        <div class="tickets">
+            <div class="ticket">
+                <div class="ticket-image">
+                    <img src="../public/images hotel/InterContinental.jpg" alt="InterContinental Phú Quốc">
                 </div>
-                <div class="travel-guide-image">
-                    <div class="travel-guide-overplay">
-
-                    </div>
-                    <img src="../public/image-travel-guide/Safari.webp" title="Safari-Phu-Quoc-Image" </div>
-                    <div class="travel-guide-text">
-                        <h4>Safari Phu Quoc</h4>
-                        <p>
-                            <span>
-                                <a class="see-more-travel" href="camnangdulich/VinWonders-Safari">
-                                    Xem chi tiết
-                                </a>
-                            </span>
-                        </p>
-                    </div>
+                <div class="ticket-content">
+                    <h3>InterContinental Phu Quoc Long Beach Resort</h3>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <span>5</span>/10
+                        <span>(3)</span>
+                    </p>
+                    <p>Chỉ từ 503.793đ</p>
                 </div>
-                <div class="travel-guide-image">
-                    <div class="travel-guide-overplay">
+                <div class="ticket-localtion-tag">
+                    <div class="ticket-localtion-hatag">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-tag-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        </svg>
+                        <span>Bán chạy nhất</span>
 
                     </div>
-                    <img src="../public/image-travel-guide/Cong-vien-Ice-Jungle-PQ.webp"
-                        title="CongVienIceJungle-Phu-Quoc-Image" </div>
-                    <div class="travel-guide-text">
-                        <h4>Cong Vien Ice Jungle </h4>
-                        <p>
-                            <span>
-                                <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
-                                    Xem chi tiết
-                                </a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="travel-guide-image">
-                    <div class="travel-guide-overplay">
-
-                    </div>
-                    <img src="../public/image-travel-guide/Grand-World_PQ.webp" title="Grand-Worl-PQ-Image" </div>
-                    <div class="travel-guide-text">
-                        <h4>Grand World Phu Quoc</h4>
-                        <p>
-                            <span>
-                                <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
-                                    Xem chi tiết
-                                </a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="travel-guide-image">
-                    <div class="travel-guide-overplay">
-
-                    </div>
-                    <img src="../public/image-travel-guide/Sunset-Sanato.webp" title="Sunset-sanato-Phu-Quoc-Image"
-                        </div>
-                    <div class="travel-guide-text">
-                        <h4>Sunset Sanato Phu Quoc</h4>
-                        <p>
-                            <span>
-                                <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
-                                    Xem chi tiết
-                                </a>
-                            </span>
-                        </p>
+                    <div class="ticket-localtion-hatag">
+                        <span>Bao gồm bữa sáng</span>
                     </div>
                 </div>
             </div>
-
-
-            <!-- Bảng hiển thị thông tin các danh mục -->
-
-            <div class="tab-container">
-                <div class="tab-header">
-                    <h2>Bạn muốn khám phá điều gì</h2>
+            <div class="ticket">
+                <div class="ticket-image">
+                    <img src="../public/images hotel/Vinpearl-Resort.jpg" alt="Vinpearl-Resort">
                 </div>
-                <div class="tabs" id="tab-content">
-                    <div class="tab active" data-tab="hotels">Các khách sạn hàng đầu</div>
-                    <div class="tab" data-tab="activities">Các điểm tham quan hàng đầu</div>
+                <div class="ticket-content">
+                    <h3>Vinpearl-Resort & Spa Phu Quoc</h3>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <span>5</span>/10
+                        <span>(3)</span>
+                    </p>
+                    <p>Chỉ từ 503.793đ</p>
                 </div>
-                <div class="tab-body">
-                    <div class="body active" id="hotels">
-                        <ul>
+                <div class="ticket-localtion-tag">
+                    <div class="ticket-localtion-hatag">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-tag-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        </svg>
+                        <span>Bán chạy nhất</span>
 
-                            <li><a href="#" class="footer-link">The Palmy Phú Quốc Resort And Spa</a></li>
-                            <li><a href="#" class="footer-link">Sol By Meliá Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Movenpick Resort Waverly Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Ocean Bay Resort & Spa Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Best Western Premier Sonasea Phú Quốc</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#" class="footer-link">Qualia Resort Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Sunset Beach Resort Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Amarin Resort & Spa Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Seashell Phú Quốc Hotel & Spa</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#" class="footer-link">M Hotel Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Thanh Kiều Beach Resort Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">The Shells Resort And Spa</a></li>
-                            <li><a href="#" class="footer-link">Mường Thanh Luxury</a></li>
-                        </ul>
                     </div>
-                    <div class="body" id="activities">
-                        <ul>
-                            <li><a href="#" class="footer-link">Bãi Ông Lang</a></li>
-                            <li><a href="#" class="footer-link">Bãi Khem</a></li>
-                            <li><a href="#" class="footer-link">Bãi Sao</a></li>
-                            <li><a href="#" class="footer-link">Hòn Thơm</a></li>
-                            <li><a href="#" class="footer-link">Làng Chài Hàm Ninh</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#" class="footer-link">VinWonders Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Safari Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Grand World</a></li>
-                            <li><a href="#" class="footer-link">Trải nghiệm dù lượn</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#" class="footer-link">Khám phá các đảo bằng Cano</a></li>
-                            <li><a href="#" class="footer-link">Chèo Thuyền Kayak</a></li>
-                            <li><a href="#" class="footer-link">Gành Dầu Phú Quốc</a></li>
-                            <li><a href="#" class="footer-link">Hòn Đồi Mồi</a></li>
-                        </ul>
+                    <div class="ticket-localtion-hatag">
+                        <span>Trọn gói</span>
                     </div>
                 </div>
             </div>
+            <div class="ticket">
+                <div class="ticket-image">
+                    <img src="../public/images hotel/JW-Marriott.jpg" alt="JW-Marriott">
+                </div>
+                <div class="ticket-content">
+                    <h3>JW-Marriott Phu Quoc Emerald Bay Resort & Spa</h3>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <span>5</span>/10
+                        <span>(3)</span>
+                    </p>
+                    <p>Chỉ từ 503.793đ</p>
+                </div>
+                <div class="ticket-localtion-tag">
+                    <div class="ticket-localtion-hatag">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-tag-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        </svg>
+                        <span>Bán chạy nhất</span>
 
-            <div class="send-notification-container">
-                <div class="send-notification-image">
-                    <img src="../public/images/imgaemail.webp" alt="Đăng ký nhận thông báo">
+                    </div>
+                </div>
+            </div>
+            <div class="ticket">
+                <div class="ticket-image">
+                    <img src="../public/images hotel/new-world-phu-quoc-resort.jpg" alt="New World Phu Quoc Resort">
+                </div>
+                <div class="ticket-content">
+                    <h3>New World Phu Quoc Resort</h3>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                        <span>5</span>/10
+                        <span>(3)</span>
+                    </p>
+                    <p>Chỉ từ 503.793đ</p>
+                </div>
+                <div class="ticket-localtion-tag">
+                    <div class="ticket-localtion-hatag">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-tag-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        </svg>
+                        <span>Bao gồm bữa sáng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="see-more-container">
+            <a href="../pages/sell-tickets.html" class="see-more-link">
+                Xem thêm
+                <span class="arrow"></span>
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- Cẩm nang du lịch -->
+
+    <div class="travel-guide-container">
+        <h2>Cẩm nang du lịch</h2>
+        <div class="travel-guide-content">
+
+            <div class="travel-guide-image">
+                <div class="travel-guide-overplay">
 
                 </div>
-                <div class="send-notification-content">
-                    <h2 class="send-content">ĐỪNG BỎ LỠ CƠ HỘI NHẬN THÔNG BÁO MỚI NHẤT</h2>
-                    <p>Đăng ký nhận thông báo để nhận thông tin mới nhất về các chương trình khuyến mãi và ưu đãi đặc
-                        biệt
-                        từ chúng tôi.</p>
-                    <form action="#" method="POST" class="send-notification-form">
-                        <input class="input-send" type="email" name="email" placeholder="Nhập email của bạn" required>
-                        <button class="button-send">
-                            <div class="svg-wrapper-1">
-                                <div class="svg-wrapper">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor"
-                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                        </path>
-                                    </svg>
-                                </div>
+                <img src="../public/image-travel-guide/Vinwonder.webp" title="VinWonders-Phu-Quoc-Image" </div>
+                <div class="travel-guide-text">
+                    <h4>VinWonders Phu Quoc</h4>
+                    <p>
+                        <span>
+                            <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
+                                Xem chi tiết
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="travel-guide-image">
+                <div class="travel-guide-overplay">
+
+                </div>
+                <img src="../public/image-travel-guide/Safari.webp" title="Safari-Phu-Quoc-Image" </div>
+                <div class="travel-guide-text">
+                    <h4>Safari Phu Quoc</h4>
+                    <p>
+                        <span>
+                            <a class="see-more-travel" href="camnangdulich/VinWonders-Safari">
+                                Xem chi tiết
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="travel-guide-image">
+                <div class="travel-guide-overplay">
+
+                </div>
+                <img src="../public/image-travel-guide/Cong-vien-Ice-Jungle-PQ.webp"
+                    title="CongVienIceJungle-Phu-Quoc-Image" </div>
+                <div class="travel-guide-text">
+                    <h4>Cong Vien Ice Jungle </h4>
+                    <p>
+                        <span>
+                            <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
+                                Xem chi tiết
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="travel-guide-image">
+                <div class="travel-guide-overplay">
+
+                </div>
+                <img src="../public/image-travel-guide/Grand-World_PQ.webp" title="Grand-Worl-PQ-Image" </div>
+                <div class="travel-guide-text">
+                    <h4>Grand World Phu Quoc</h4>
+                    <p>
+                        <span>
+                            <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
+                                Xem chi tiết
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="travel-guide-image">
+                <div class="travel-guide-overplay">
+
+                </div>
+                <img src="../public/image-travel-guide/Sunset-Sanato.webp" title="Sunset-sanato-Phu-Quoc-Image" </div>
+                <div class="travel-guide-text">
+                    <h4>Sunset Sanato Phu Quoc</h4>
+                    <p>
+                        <span>
+                            <a class="see-more-travel" href="camnangdulich/VinWonders-Phu-Quoc">
+                                Xem chi tiết
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bảng hiển thị thông tin các danh mục -->
+
+        <div class="tab-container">
+            <div class="tab-header">
+                <h2>Bạn muốn khám phá điều gì</h2>
+            </div>
+            <div class="tabs" id="tab-content">
+                <div class="tab active" data-tab="hotels">Các khách sạn hàng đầu</div>
+                <div class="tab" data-tab="activities">Các điểm tham quan hàng đầu</div>
+            </div>
+        </div>
+            <div class="tab-body">
+                <div class="body active" id="hotels">
+                    <ul>
+
+                        <li><a href="#" class="footer-link">The Palmy Phú Quốc Resort And Spa</a></li>
+                        <li><a href="#" class="footer-link">Sol By Meliá Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Movenpick Resort Waverly Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Ocean Bay Resort & Spa Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Best Western Premier Sonasea Phú Quốc</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="footer-link">Qualia Resort Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Sunset Beach Resort Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Amarin Resort & Spa Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Seashell Phú Quốc Hotel & Spa</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="footer-link">M Hotel Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Thanh Kiều Beach Resort Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">The Shells Resort And Spa</a></li>
+                        <li><a href="#" class="footer-link">Mường Thanh Luxury</a></li>
+                    </ul>
+                </div>
+                <div class="body" id="activities">
+                    <ul>
+                        <li><a href="#" class="footer-link">Bãi Ông Lang</a></li>
+                        <li><a href="#" class="footer-link">Bãi Khem</a></li>
+                        <li><a href="#" class="footer-link">Bãi Sao</a></li>
+                        <li><a href="#" class="footer-link">Hòn Thơm</a></li>
+                        <li><a href="#" class="footer-link">Làng Chài Hàm Ninh</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="footer-link">VinWonders Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Safari Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Grand World</a></li>
+                        <li><a href="#" class="footer-link">Trải nghiệm dù lượn</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="footer-link">Khám phá các đảo bằng Cano</a></li>
+                        <li><a href="#" class="footer-link">Chèo Thuyền Kayak</a></li>
+                        <li><a href="#" class="footer-link">Gành Dầu Phú Quốc</a></li>
+                        <li><a href="#" class="footer-link">Hòn Đồi Mồi</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="send-notification-container">
+            <div class="send-notification-image">
+                <img src="../public/images/imgaemail.webp" alt="Đăng ký nhận thông báo">
+
+            </div>
+            <div class="send-notification-content">
+                <h2 class="send-content">ĐỪNG BỎ LỠ CƠ HỘI NHẬN THÔNG BÁO MỚI NHẤT</h2>
+                <p>Đăng ký nhận thông báo để nhận thông tin mới nhất về các chương trình khuyến mãi và ưu đãi đặc
+                    biệt
+                    từ chúng tôi.</p>
+                <form action="#" method="POST" class="send-notification-form">
+                    <input class="input-send" type="email" name="email" placeholder="Nhập email của bạn" required>
+                    <button class="button-send">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
                             </div>
-                            <span>Send</span>
-                        </button>
-                    </form>
-                </div>
+                        </div>
+                        <span>Send</span>
+                    </button>
+                </form>
             </div>
-            <!--Tag lời gợi ý  -->
-            <div class="suggest-container">
-                <div class="suggest-container-content">
-                    <h3>Lý do nên đặt chỗ với TD Touris ?</h3>
+        </div>
+        <!--Tag lời gợi ý  -->
+        <div class="suggest-container">
+            <div class="suggest-container-content">
+                <h3>Lý do nên đặt chỗ với TD Touris ?</h3>
+            </div>
+            <div class="suggest-list">
+                <div class=" suggest-item">
+                    <img class="suggest-image" src="../public/images/item-list.webp" alt="public travis" </div>
+                    <div class="suggest-body">
+                        <h4>Đáp ứng mọi như cầu của bạn</h4>
+                        <p>Từ nơi lưu trú và tham quan, bạn có thể tin chọn sản phẩm hoàn chỉnh và Hướng dẫn cụ thể
+                            của
+                            chúng tôi.</p>
+                    </div>
                 </div>
-                <div class="suggest-list">
-                    <div class=" suggest-item">
-                        <img class="suggest-image" src="../public/images/item-list.webp" alt="public travis" </div>
-                        <div class="suggest-body">
-                            <h4>Đáp ứng mọi như cầu của bạn</h4>
-                            <p>Từ nơi lưu trú và tham quan, bạn có thể tin chọn sản phẩm hoàn chỉnh và Hướng dẫn cụ thể
-                                của
-                                chúng tôi.</p>
-                        </div>
+                <div class=" suggest-item">
+                    <img class="suggest-image" src="../public/images/suggest-2.webp" alt="public travis" </div>
+                    <div class="suggest-body">
+                        <h4>Tùy chọn chỗ linh hoạt </h4>
+                        <p>Kế hoạch thay đổi bất ngờ ? Đừng lo !! Đổi lịch hoạt hoàn tiền dễ dàng.</p>
                     </div>
-                    <div class=" suggest-item">
-                        <img class="suggest-image" src="../public/images/suggest-2.webp" alt="public travis" </div>
-                        <div class="suggest-body">
-                            <h4>Tùy chọn chỗ linh hoạt </h4>
-                            <p>Kế hoạch thay đổi bất ngờ ? Đừng lo !! Đổi lịch hoạt hoàn tiền dễ dàng.</p>
-                        </div>
-                    </div>
-                    <div class=" suggest-item">
-                        <img class="suggest-image" src="../public/images/suggest3.webp" alt="public travis" </div>
-                        <div class="suggest-body">
-                            <h4>Thanh toán an toàn và thuận tiện</h4>
-                            <p>Tận hưởng nhiều cách thanh toán an toàn, bằng loại tiền thuận tiện nhất cho bạn.</p>
-                        </div>
+                </div>
+                <div class=" suggest-item">
+                    <img class="suggest-image" src="../public/images/suggest3.webp" alt="public travis" </div>
+                    <div class="suggest-body">
+                        <h4>Thanh toán an toàn và thuận tiện</h4>
+                        <p>Tận hưởng nhiều cách thanh toán an toàn, bằng loại tiền thuận tiện nhất cho bạn.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
 
-        <!-- footer -->
 
-        <footer class="footer-container">
-            <div class="footer-content">
-                <div class="footer-grid">
-                    <div class="payment-partners">
-                        <h4 class="partners-heading">Đối tác thanh toán</h4>
-                        <div class="payment-grid">
-                            <img src="../public/images//payment/visa-logo-png.png" alt="VISA" class="payment-logo">
-                            <img src="../public/images//payment/BIDV-01.png" alt="BIDV" class="payment-logo">
-                            <img src="../public/images//payment/logo-MB.png" alt="MB Bank" class="payment-logo">
-                            <img src="../public/images//payment/Agribank-logo.png" alt="Agribank" class="payment-logo">
-                            <img src="../public/images//payment/MoMo_Logo.png" alt="MoMo" class="payment-logo">
-                        </div>
-                    </div>
-                    <!-- Cột Sản phẩm -->
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Về TD Touris</h4>
-                        <ul class="footer-list">
-                            <li><a href="#" class="footer-link">Liên hệ với chúng tôi </a></li>
-                            <li><a href="#" class="footer-link">Trợ giúp</a></li>
-                            <li><a href="#" class="footer-link">Về chúng tôi</a></li>
-                        </ul>
-                    </div>
-                    <!-- Cột Sản phẩm -->
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Sản phẩm</h4>
-                        <ul class="footer-list">
-                            <li><a href="#" class="footer-link">Khách sạn</a></li>
-                            <li><a href="#" class="footer-link">Vé du lịch</a></li>
-                        </ul>
-                    </div>
-                    <!-- Cột Sản phẩm -->
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Khác</h4>
-                        <ul class="footer-list">
-                            <li><a href="#" class="footer-link">Chính sách và quyền hạn</a></li>
-                            <li><a href="#" class="footer-link">Điều kiện và điều khoản</a></li>
-                        </ul>
+    <!-- footer -->
+
+    <class="footer-container">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="payment-partners">
+                    <h4 class="partners-heading">Đối tác thanh toán</h4>
+                    <div class="payment-grid">
+                        <img src="../public/images//payment/visa-logo-png.png" alt="VISA" class="payment-logo">
+                        <img src="../public/images//payment/BIDV-01.png" alt="BIDV" class="payment-logo">
+                        <img src="../public/images//payment/logo-MB.png" alt="MB Bank" class="payment-logo">
+                        <img src="../public/images//payment/Agribank-logo.png" alt="Agribank" class="payment-logo">
+                        <img src="../public/images//payment/MoMo_Logo.png" alt="MoMo" class="payment-logo">
                     </div>
                 </div>
-
-                <div class="footer-bottom">
-                    <span class="copyright">© 2025 TD Touris. All rights reserved</span>
+                <!-- Cột Sản phẩm -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Về TD Touris</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Liên hệ với chúng tôi </a></li>
+                        <li><a href="#" class="footer-link">Trợ giúp</a></li>
+                        <li><a href="#" class="footer-link">Về chúng tôi</a></li>
+                    </ul>
+                </div>
+                <!-- Cột Sản phẩm -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Sản phẩm</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Khách sạn</a></li>
+                        <li><a href="#" class="footer-link">Vé du lịch</a></li>
+                    </ul>
+                </div>
+                <!-- Cột Sản phẩm -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Khác</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Chính sách và quyền hạn</a></li>
+                        <li><a href="#" class="footer-link">Điều kiện và điều khoản</a></li>
+                    </ul>
                 </div>
             </div>
-    </div>
-    </footer>
-    </div>
 
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script type="module" src="../js/src-index-google.js"> </script>
-    <script src="../js/index-tab.js"></script>
+            <div class="footer-bottom">
+                <span class="copyright">© 2025 TD Touris. All rights reserved</span>
+            </div>
+        </div>
+        </div>
+
+
+        </footer>
+
+        </div>
+        <script src="../php/get_tickets.php"
+        <script src="../js/index-scrip.js"></script>
+        <script <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script type="module" src="../js/src-index-google.js"> </script>
+        <script src="../js/index-tab.js"></script>
 </body>
 
 

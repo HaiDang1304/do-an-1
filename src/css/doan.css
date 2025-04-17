@@ -74,7 +74,7 @@ font-size: 20px;
     background-color: rgba(0, 0, 0, 0.363);
     backdrop-filter: blur(10px);
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 2;
@@ -348,7 +348,6 @@ ul {
 }
 
 .ticket {
-    display: flex;
     flex-direction: column;
     border-radius: 10px;
     width: calc(25% - 8px);

@@ -314,10 +314,10 @@ ul {
 } */
 .bg-container {
     background-image: url('../public/images hotel/image-book-hotel/backgroud_ticket.webp');
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 40vh;
+    min-height: 50vh;
     /* Đảm bảo phần nền phủ toàn bộ chiều cao */
 }
 
