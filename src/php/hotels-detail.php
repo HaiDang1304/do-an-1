@@ -6,7 +6,12 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
 
     // Use prepared statement to avoid SQL injection
-    $sql = "SELECT * FROM hotels_detail WHERE id = ?";
+    $sql = "SELECT 
+                hotels.*, 
+                hotels_detail.*
+            FROM hotels
+            INNER JOIN hotels_detail ON hotels.id = hotels_detail.id_hotels
+            WHERE hotels.id = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, 'i', $id);
     mysqli_stmt_execute($stmt);
@@ -17,7 +22,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         // Decode images JSON safely
         $images = isset($hotel['images']) ? json_decode($hotel['images'], true) : [];
         ?>
-
+        <?php include 'header.php'; ?>
         <div class="container py-4">
             <div class="row g-4 align-items-start">
                 <div class="col-md-3">

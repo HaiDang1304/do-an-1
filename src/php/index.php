@@ -1,14 +1,5 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$database = 'do-an-1';
-
-
-$conn = new mysqli($host, $user, $password, $database);
-if ($conn->connect_error) {
-    die('Kết nối thất bại' . $conn->connect_error);
-}
+include "../php/config.php";
 // travel-guides
 $sql = "SELECT * FROM travel_guides";
 $result = $conn->query($sql);
@@ -80,7 +71,7 @@ $resultactivities = $conn->query($sqlactivities);
                 <!-- Dữ liệu sẽ được render tại đây -->
             </div>
             <div class="see-more-container">
-                <a href="../pages/sell-tickets.html" class="see-more-link">
+                <a href="../php/hotels-list.php" class="see-more-link">
                     Xem thêm
                     <span class="arrow"></span>
                 </a>

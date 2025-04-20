@@ -503,18 +503,34 @@ ul {
 }
 
 .ribbon {
-    background: linear-gradient(135deg, #ff6a00, #ffb347);
+
     color: white;
     font-size: 0.75rem;
     font-weight: 600;
-    padding: 4px 8px;
     position: absolute;
     top: 10px;
     left: 0;
     z-index: 3;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
 }
+
+.ribbon .badge {
+    background: linear-gradient(135deg, #ff6a00, #ffb347);
+    font-size: 0.8rem;
+    color: #333;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0 50rem 50rem 0; 
+    transition: all 0.2s ease;
+
+  }
+  .ribbon .badge:hover {
+    background-color: #f8f9fa;
+    color: #000;
+  }
 
 .hotel-tags .badge {
     background-color: #f1f3f5;
@@ -704,5 +720,23 @@ ul {
     margin-bottom: 1rem;
     /* flex: 1; */
     text-align: center;
-    width: 100%;
-}
+        width: 100%;
+    }
+
+
+/* .ribbon {
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    max-width: 90%; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  } */
