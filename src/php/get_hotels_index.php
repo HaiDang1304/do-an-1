@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     exit;
 }
 
-$sql = "SELECT * FROM hotels";
+$sql = "SELECT * FROM hotels LIMIT 4";
 $result = $conn->query($sql);
 
 $hotels = [];

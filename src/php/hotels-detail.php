@@ -1,6 +1,6 @@
 <?php
 include "../php/config.php";
-
+session_start();
 // Check if the 'id' parameter is set and is numeric
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];

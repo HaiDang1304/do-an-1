@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 container.innerHTML = "<p>Không có khách sạn nào.</p>";
                 return;
             }
-
-            data.forEach(hotel => {
+            container.innerHTML = '';
+            data.slice(0, 4).forEach(hotel => {
                 const ticket = document.createElement("div");
                 ticket.className = "ticket";
-
+            
                 ticket.innerHTML = `
                 <a class="ticket" href="../php/hotels-detail.php?id=${hotel.id}">
                     <div class="ticket-image">
@@ -34,11 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                         `).join('') : ''}
                     </div>
-                    </a>
+                </a>
                 `;
-
+            
                 container.appendChild(ticket);
             });
+            
         })
         .catch(error => {
             console.error("Lỗi khi fetch hotels:", error);

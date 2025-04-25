@@ -107,10 +107,11 @@ body {
     padding: 0 5px;
 }
 
-.menu-item{
+.menu-item {
     position: relative;
 }
-.sub-menu{
+
+.sub-menu {
     display: none;
     position: absolute;
     min-width: 160px;
@@ -119,7 +120,8 @@ body {
     background-color: #1e6ccb;
 
 }
-.menu-item:hover .sub-menu{
+
+.menu-item:hover .sub-menu {
     display: block;
 }
 
@@ -162,6 +164,7 @@ body {
     color: #1e3a8a;
     text-decoration: underline;
 }
+
 /* Social Login Container */
 .social-login {
     margin: 2rem 0;
@@ -239,15 +242,17 @@ body {
 }
 
 .google-login:hover {
-    background: #f8f9fa;
+    background-color: #f1f3f5 !important;
+    border-color: #4285F4 !important;
+    color: #4285F4 !important;
     transform: translateY(-2px);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Căn chỉnh logo Google */
 .google-login svg {
     width: 24px;
     height: 24px;
-    flex-shrink: 0; /* Ngăn chặn icon bị méo */
+    flex-shrink: 0;
+    /* Ngăn chặn icon bị méo */
 }
-
