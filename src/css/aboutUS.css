@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x300?text=Background+Image');
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header .logo span {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header .menu ul li {
+    display: inline-block;
+}
+
+.header .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.header .menu ul li a:hover {
+    color: #0d6efd;
+}
+
+.header .user-login a {
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.header .user-login a:hover {
+    background-color: #0b5ed7;
+}
+
+/* Main Content */
+.content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.content .breadcrumb a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.content .breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.content .breadcrumb span {
+    color: #666;
+}
+
+.content h1 {
+    font-size: 32px;
+    color: #0d6efd;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.content .intro {
+    margin-bottom: 30px;
+}
+
+.content .intro p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.content .intro h2 {
+    font-size: 20px;
+    color: #333;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+.content .intro ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.content .intro ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.content .contact-info h2 {
+    font-size: 20px;
+    color: #333;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+.content .contact-info ul {
+    list-style: none;
+}
+
+.content .contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.content .contact-info ul li a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.content .contact-info ul li a:hover {
+    text-decoration: underline;
+}

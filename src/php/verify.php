@@ -2,9 +2,6 @@
 session_start();
 include('config.php'); // Kết nối cơ sở dữ liệu
 
-// Bật hiển thị lỗi để debug (xóa dòng này khi triển khai chính thức)
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 if (isset($_GET['token'])) {
     $token = $_GET['token'];

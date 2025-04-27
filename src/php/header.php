@@ -24,8 +24,8 @@ error_log("Session in header.php: " . print_r($_SESSION, true));
                         <li><a href="sell-tickets.html">Khách Sạn</a></li>
                     </ul>
                 </li>
-                <li><a href="lienhe.html">Liên Hệ</a></li>
-                <li><a href="thongtin.html">Thông Tin</a></li>
+                <li><a href="../pages/aboutUS.html">Liên Hệ</a></li>
+                <li><a href="user_info.php">Thông Tin</a></li>
                 <li><a href="danhgia.html">Đánh Giá</a></li>
             </ul>
         </div>

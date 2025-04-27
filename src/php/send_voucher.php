@@ -37,10 +37,8 @@ function sendVoucherEmail($email, $conn) {
         $stmt->bind_param("s", $email);
         $stmt->execute();
 
-        // Tạo mã voucher ngẫu nhiên
-        $voucher_code = strtoupper(bin2hex(random_bytes(4))); // Ví dụ: "A1B2C3D4"
-
-        // Gửi email chứa voucher
+        $voucher_code = strtoupper(bin2hex(random_bytes(4))); 
+        
         $mail = new PHPMailer(true);
         try {
             // Cấu hình SMTP
@@ -52,11 +50,10 @@ function sendVoucherEmail($email, $conn) {
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = SMTP_PORT;
 
-            // Người gửi và người nhận
             $mail->setFrom(SMTP_USERNAME, 'TD Touris');
             $mail->addAddress($email);
 
-            // Nội dung email
+        
             $mail->isHTML(true);
             $mail->Subject = 'Voucher Khuyen Mai Tu TD Touris';
             $mail->Body = "
@@ -80,7 +77,7 @@ function sendVoucherEmail($email, $conn) {
 
             $mail->send();
             $response['success'] = true;
-            $response['message'] = '<p style="color: blue;">Email đã được gửi! Vui lòng kiểm tra hộp thư của bạn.</p>';
+            $response['message'] = '<p style="color: #ffff;">Email đã được gửi! Vui lòng kiểm tra hộp thư của bạn.</p>';
         } catch (Exception $e) {
             $response['message'] = '<p style="color: red;">Lỗi gửi email: ' . htmlspecialchars($mail->ErrorInfo) . '</p>';
         }

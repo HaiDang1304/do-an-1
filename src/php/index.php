@@ -3,7 +3,7 @@ session_start();
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/send_voucher.php';
 
-// Xử lý đăng xuất
+
 if (isset($_GET['logout'])) {
     unset($_SESSION['user']);
     session_regenerate_id(true);
@@ -72,9 +72,6 @@ $resultactivities = $conn->query($sqlactivities);
                 <span class="text-blue">NỔI TIẾNG</span>
             </h2>
         </div>
-        <div class="carousel" id="carousel-container">
-        </div>
-
         <div class="slide">
             <div class="slide-img-backgroud">
                 <img src="../public/images/backgroud6.0.jpeg">
@@ -91,7 +88,6 @@ $resultactivities = $conn->query($sqlactivities);
         <div class="ticket-container">
             <h2 class="t-content">TẬN HƯỞNG THỜI GIAN TUYỆT VỜI KHI ĐẾN VỚI PHÚ QUỐC</h2>
             <div class="tickets" id="tickets-list">
-                <!-- Dữ liệu sẽ được render tại đây -->
             </div>
             <div class="see-more-container">
                 <a href="#" class="see-more-link">Xem thêm<span class="arrow"></span></a>

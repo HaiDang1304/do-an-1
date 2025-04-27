@@ -1,13 +1,7 @@
 <?php
-header('Content-Type: application/json'); // Luôn đặt header đầu tiên
+header('Content-Type: application/json');
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "do-an-1";
-
-$conn = new mysqli($host, $user, $pass, $db);
-$conn->set_charset("utf8");
+include 'config.php';
 
 if ($conn->connect_error) {
     http_response_code(500);
@@ -15,9 +9,9 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT 
-            t.title, t.location, t.rating, t.reviews, t.price, 
+            h.image, h.rating, h.reviews, h.price, h.tags, h.location, h.location_id, h.name, h.stra 
             i.filename, i.pswp_width, i.pswp_height, i.alt_text
-        FROM `tickets-tour` t
+        FROM `hotels` t
         JOIN `images` i ON t.image_id = i.id";
 
 $result = $conn->query($sql);

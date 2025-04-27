@@ -1,0 +1,126 @@
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Thông tin người dùng */
+.user-info-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.user-info-card:hover {
+    transform: translateY(-5px);
+}
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.user-info-card h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.user-info-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.user-info-card p i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* Lịch sử đặt khách sạn */
+.booking-history {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-history h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f9ff;
+}
+
+.table .btn-details {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.table .btn-details:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .user-info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .user-avatar {
+        margin-bottom: 15px;
+    }
+
+    .table th, .table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
